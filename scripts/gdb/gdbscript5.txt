@@ -1,0 +1,11 @@
+set pagination off
+set architecture i386
+attach 2046719
+catch syscall write
+commands
+silent
+printf "write: fd=%d buf=%p len=%d\n", $ebx, $ecx, $edx
+eval "dump binary memory /tmp/wdump_%d.bin $ecx $ecx+$edx", $edx
+continue
+end
+continue

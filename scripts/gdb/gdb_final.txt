@@ -1,0 +1,33 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach PIDHERE
+set $p = (int)mmap(0, 0x40000, 3, 0x22, -1, 0)
+restore /tmp/inject.bin binary $p
+set $inj = $p
+set $end = $p + TOTLEN
+set $idx = 0
+set $hits = 0
+# 0x4aa023 = call memcpy(dest, src, len)
+#   [esp]   = dest
+#   [esp+4] = src
+#   [esp+8] = len  (сколько EWB сам запросил)
+# Меняем ТОЛЬКО src. Длину не трогаем — поток EWB должен остаться не нарушен.
+break *0x4aa023
+commands
+silent
+set $hits = $hits + 1
+set $len = *(int*)($esp + 8)
+if $len > 0
+  set $src = $inj + $idx
+  if $src + $len > $end
+    set $src = $end - $len
+  end
+  set *(int*)($esp + 4) = $src
+  set $idx = $idx + $len
+end
+printf "INJECT hit=%d want=%d idx=%d\n", $hits, $len, $idx
+continue
+end
+continue

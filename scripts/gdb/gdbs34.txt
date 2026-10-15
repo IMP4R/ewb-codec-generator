@@ -1,0 +1,22 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach 2062406
+# грузим наш текст в память (free area between sections)
+restore /tmp/inject.bin binary 0x55b000
+set $inj = 0x55b000
+set $idx = 0
+break *0x4a9def
+commands
+silent
+set $ch = *(unsigned char*)($inj + $idx)
+if $ch != 0
+  set *(unsigned char*)($ebp + 0xc) = $ch
+  set $idx = $idx + 1
+else
+  set *(int*)($ebp + 0xc) = -1
+end
+continue
+end
+continue

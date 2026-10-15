@@ -1,0 +1,13 @@
+set pagination off
+set architecture i386
+set breakpoint pending on
+attach 2046719
+break wsprintfA
+break user32!wsprintfA
+commands 1 2
+silent
+printf "wsprintfA called\n"
+bt 8
+continue
+end
+continue

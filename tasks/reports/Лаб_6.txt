@@ -1,0 +1,278 @@
+
+
+
+
+ВЯТСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+
+
+
+ОТЧЁТ
+по лабораторной работе № 6
+по дисциплине «Архитектура вычислительных устройств»
+Тема: команды пересылки данных (MOV, XCHG)
+
+
+
+
+
+
+Выполнил: Денис Лузянин
+Киров, 2026
+
+Цель работы
+1. Изучить команды пересылки данных MOV и XCHG.
+2. Научиться использовать ассемблерные процедуры в проектах Visual Studio (конфигурация x86).
+1. Пересылка 16- и 8-разрядных данных (mov_16)
+; Лабораторная работа №6, п.1 — пересылка 16- и 8-битных данных
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC a, x, b, z
+a DW ?
+x DW ?
+b DB ?
+z DB ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC mov_16
+mov_16 PROC
+    MOV AX, a      ; AX = a  (16 бит)
+    MOV x, AX      ; x = a
+    MOV BL, b      ; BL = b  (8 бит)
+    MOV z, BL      ; z = b
+    RET
+mov_16 ENDP
+CODE ENDS
+END
+
+Программа C++ (mov16.cpp) запрашивает a и b, присваивает x = a и z = b средствами C++, обнуляет их и вызывает процедуру mov_16, после чего значения восстанавливаются ассемблером.
+Результаты выполнения для контрольных данных:
+
+Объяснение: переменная a имеет тип short int (−32768…32767). Значение 50000 не помещается: 50000 − 65536 = −15536, а −50000 + 65536 = 15536 — это арифметика по модулю 2^16. Переменная z — unsigned char (0…255): 500 mod 256 = 244, −100 + 256 = 156, −500 + 512 = 12 — арифметика по модулю 2^8. Значения сохраняются как младшие биты/байты двоичного представления.
+2. Пересылка 32 разрядов через 16-разрядные регистры (mov_32)
+; Лабораторная работа №6 — пересылка 32 бит через 16-разрядные регистры
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC a, b
+a DD 12345678h
+b DD ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC mov_32
+mov_32 PROC
+    MOV AX, WORD PTR a      ; младшее слово
+    MOV BX, WORD PTR a+2    ; старшее слово
+    MOV WORD PTR b, AX
+    MOV WORD PTR b+2, BX
+    RET
+mov_32 ENDP
+CODE ENDS
+END
+
+Результат: до вызова a = 12345678, b = 0; после вызова b = 12345678 — 32-битная константа переписана двумя парами «MOV 16 бит».
+3. Задание 2: пересылка 32 бит четырьмя 8-разрядными регистрами
+; Задание 2: пересылка 32 бит с помощью четырёх 8-разрядных регистров
+; 32-битная переменная A=12345678h в памяти (little-endian):
+;   A+0 = 78h, A+1 = 56h, A+2 = 34h, A+3 = 12h
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC a8, b8
+a8 DD 12345678h
+b8 DD ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC mov_32_8
+mov_32_8 PROC
+    MOV AL, BYTE PTR a8     ; AL = 78h
+    MOV BL, BYTE PTR a8+1   ; BL = 56h
+    MOV CL, BYTE PTR a8+2   ; CL = 34h
+    MOV DL, BYTE PTR a8+3   ; DL = 12h
+    MOV BYTE PTR b8,   AL   ; B+0 = 78h
+    MOV BYTE PTR b8+1, BL   ; B+1 = 56h
+    MOV BYTE PTR b8+2, CL   ; B+2 = 34h
+    MOV BYTE PTR b8+3, DL   ; B+3 = 12h
+    RET
+mov_32_8 ENDP
+CODE ENDS
+END
+
+Расположение переменной A = 12345678h в памяти (little-endian) и результат пересылки:
+
+32-разрядное число хранится в памяти младшим байтом вперёд: по адресам A+0…A+3 лежат байты 78h, 56h, 34h, 12h.
+4. Задание 3: пересылка 64 бит двумя 32-разрядными регистрами
+; Задание 3: пересылка 64 бит с помощью двух 32-разрядных регистров
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC a64, b64
+a64 DQ 0123456789ABCDEFh
+b64 DQ ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC mov_64
+mov_64 PROC
+    MOV EAX, DWORD PTR a64    ; младшие 32 бита
+    MOV EDX, DWORD PTR a64+4  ; старшие 32 бита
+    MOV DWORD PTR b64,   EAX
+    MOV DWORD PTR b64+4, EDX
+    RET
+mov_64 ENDP
+CODE ENDS
+END
+
+A = 0123456789ABCDEFh переносится в B частями: младшие 32 бита через EAX, старшие — через EDX.
+5. Задание 4: исследование команды XCHG
+; Задание 4: исследование команды XCHG (обмен значений двух переменных)
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC v1, v2
+v1 DW 0AAAAh
+v2 DW 05555h
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC xchg_test
+xchg_test PROC
+    MOV AX, v1
+    MOV BX, v2
+    XCHG AX, BX     ; AX <-> BX: AX=5555h, BX=AAAAh
+    MOV v1, AX      ; v1 = 5555h
+    MOV v2, BX      ; v2 = AAAAh
+    ; XCHG с памятью: обмен без промежуточного регистра
+    XCHG v1, v2     ; обратно: v1=AAAAh, v2=5555h
+    RET
+xchg_test ENDP
+CODE ENDS
+END
+
+XCHG меняет местами содержимое операндов: регистр-регистр или регистр-память. После XCHG AX,BX: AX = 5555h, BX = AAAAh. Повторный обмен XCHG v1,v2 напрямую между ячейками памяти возвращает исходные значения. XCHG эквивалентен трём командам MOV с промежуточным регистром, но выполняется атомарно.
+6. Задание 5: побайтовый циклический сдвиг вправо в EAX командами MOV
+; Задание 5: побайтовый циклический сдвиг вправо в EAX командами MOV
+; EAX = [B3 B2 B1 B0] -> [B0 B3 B2 B1] (младший байт уходит в старший)
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC acc
+acc DD ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC rot_byte_right
+rot_byte_right PROC
+    MOV EAX, acc              ; EAX = B3 B2 B1 B0
+    MOV DL, AL                ; DL = B0 (спасаем)
+    MOV BH, BYTE PTR acc+3    ; BH = B3 (спасаем)
+    MOV AL, AH                ; байт0 <- B1   : EAX = B3 B2 B1 B1
+    MOV AH, BYTE PTR acc+2    ; байт1 <- B2   : EAX = B3 B2 B2 B1
+    MOV acc, EAX              ; промежуточно в память: B3 B2 B2 B1
+    MOV BYTE PTR acc+2, BH    ; байт2 <- B3
+    MOV BYTE PTR acc+3, DL    ; байт3 <- B0   : итог B0 B3 B2 B1
+    MOV EAX, acc
+    RET
+rot_byte_right ENDP
+CODE ENDS
+END
+
+Пример: EAX = 12345678h → после сдвига 78123456h: младший байт 78h уходит в старший разряд, остальные сдвигаются вправо.
+
+7. Задание 6: реверс порядка байтов в EAX
+; Задание 6: реверс порядка байтов в EAX только командами пересылки
+; EAX = [B3 B2 B1 B0] -> [B0 B1 B2 B3]... точнее реверс: новый = [B0 B1 B2 B3] при чтении
+; EAX-байты: старший->младший: было B3 B2 B1 B0, станет B0 B1 B2 B3
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC rev_in
+rev_in DD ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC reverse_bytes
+reverse_bytes PROC
+    MOV EAX, rev_in           ; EAX = B3 B2 B1 B0
+    MOV DL, AL                ; DL = B0
+    MOV CL, AH                ; CL = B1
+    MOV BL, BYTE PTR rev_in+2 ; BL = B2
+    MOV DH, BYTE PTR rev_in+3 ; DH = B3
+    MOV AL, DH                ; байт0 <- B3
+    MOV AH, BL                ; байт1 <- B2   : EAX = B3 B2 B2 B3
+    MOV rev_in, EAX           ; в память: B3 B2 B2 B3
+    MOV BYTE PTR rev_in+2, CL ; байт2 <- B1
+    MOV BYTE PTR rev_in+3, DL ; байт3 <- B0   : итог B0 B1 B2 B3... в байтах памяти:
+    MOV EAX, rev_in           ; EAX = [B0 B1 B2 B3] (реверс выполнен)
+    RET
+reverse_bytes ENDP
+CODE ENDS
+END
+
+Пример: EAX = 12345678h → 78563412h (порядок байтов полностью обращён).
+
+8. Задание 7: копирование массива 4 байта с инверсией
+; Задание 7: копия 4-байтового массива с инверсией каждого байта (XOR 0FFh)
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC src4, dst4
+src4 DB 11h, 22h, 33h, 44h
+dst4 DB 4 DUP (?)
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC copy_invert
+copy_invert PROC
+    MOV AL, src4
+    XOR AL, 0FFh
+    MOV dst4, AL
+    MOV AL, src4+1
+    XOR AL, 0FFh
+    MOV dst4+1, AL
+    MOV AL, src4+2
+    XOR AL, 0FFh
+    MOV dst4+2, AL
+    MOV AL, src4+3
+    XOR AL, 0FFh
+    MOV dst4+3, AL
+    RET
+copy_invert ENDP
+CODE ENDS
+END
+
+Исходный массив 11h 22h 33h 44h; результат: EEh DDh CCh BBh (каждый байт проинвертирован XOR с маской 0FFh).
+Вывод
+Освоены команды пересылки MOV и XCHG для операндов 8/16/32/64 бита, обмен с памятью, побайтовая ротация и реверс регистра EAX средствами пересылки; изучена компоновка 32-разрядной переменной в памяти (little-endian) и типовые эффекты переполнения short int и unsigned char.
+
+a (ввод) | x (short int) | b (ввод) | z (unsigned char)
+10000 | 10000 | 100 | 100
+50000 | −15536 | 500 | 244
+−10000 | −10000 | −100 | 156
+−50000 | 15536 | −500 | 12
+Адрес | Байт A | Регистр | Байт B
+A+0 | 78h | AL | B+0 = 78h
+A+1 | 56h | BL | B+1 = 56h
+A+2 | 34h | CL | B+2 = 34h
+A+3 | 12h | DL | B+3 = 12h
+Байт | До | После
+[31:24] | 12h | 78h
+[23:16] | 34h | 12h
+[15:8] | 56h | 34h
+[7:0] | 78h | 56h
+Байт | До | После
+[31:24] | 12h | 78h
+[23:16] | 34h | 56h
+[15:8] | 56h | 34h
+[7:0] | 78h | 12h

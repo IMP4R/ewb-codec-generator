@@ -1,0 +1,33 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach PIDHERE
+set $p = (int)mmap(0, 0x40000, 3, 0x22, -1, 0)
+restore /tmp/inject.bin binary $p
+set $inj = $p
+set $idx = 0
+set $rem = REMHERE
+set $hits = 0
+# 0x4aa023 = call memcpy(dest, src, len); стек: [esp]=dest, [esp+4]=src, [esp+8]=len
+break *0x4aa023
+commands
+silent
+set $hits = $hits + 1
+if $rem > 0
+  if $rem > 4096
+    set $n2 = 4096
+  else
+    set $n2 = $rem
+  end
+  set *(int*)($esp + 4) = $inj + $idx
+  set *(int*)($esp + 8) = $n2
+  set $idx = $idx + $n2
+  set $rem = $rem - $n2
+else
+  set *(int*)($esp + 8) = 0
+end
+printf "INJECT hit=%d n=%d idx=%d\n", $hits, $n2, $idx
+continue
+end
+continue

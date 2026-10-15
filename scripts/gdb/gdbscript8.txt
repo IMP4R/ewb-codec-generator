@@ -1,0 +1,13 @@
+set pagination off
+set architecture i386
+attach 2046719
+catch syscall write writev pwrite64
+commands
+silent
+printf "SYS nr=%d ebx=%d ecx=0x%08x edx=%d\n", $eax, $ebx, $ecx, $edx
+if $edx > 100
+  eval "dump binary memory /tmp/cap_%d.bin $ecx $ecx+$edx", $edx
+end
+continue
+end
+continue

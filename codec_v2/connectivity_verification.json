@@ -1,0 +1,86 @@
+[
+  {
+    "circuit": "F1_min_NAND.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "F1_SDNF.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "SumSub4.logic",
+    "cases": 512,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "FullAdder.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "HA_layout.logic",
+    "cases": 4,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "F1_SKNF.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "Decoder2to4.logic",
+    "cases": 4,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "Demux1to2.logic",
+    "cases": 4,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "Encoder4to2.logic",
+    "cases": 16,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "Mux2to1.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "F1_min_ANDORNOT.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  },
+  {
+    "circuit": "F1_min_NOR.logic",
+    "cases": 8,
+    "status": "PASS",
+    "method": "independent serialized component-pin connectivity evaluator",
+    "not_ewb_simulation": true
+  }
+]

@@ -1,0 +1,11 @@
+set pagination off
+set architecture i386
+attach 2062406
+break *0x4aa04f
+commands
+silent
+printf "SINK buf=%p esi=%p len_at_esi=%d\n", $edi, $esi, *(int*)$esi
+x/48xb $edi
+continue
+end
+continue

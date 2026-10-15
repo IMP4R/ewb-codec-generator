@@ -1,0 +1,15 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGINT nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+handle SIGALRM nostop noprint pass
+handle SIGCHLD nostop noprint pass
+attach 2062406
+break *0x4a9def
+commands
+silent
+printf "P %d\n", *(unsigned char*)($ebp+0xc)
+continue
+end
+continue

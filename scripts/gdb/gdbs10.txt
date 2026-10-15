@@ -1,0 +1,11 @@
+set pagination off
+set architecture i386
+attach 2046719
+break wsprintfA
+commands
+silent
+printf "wsprintfA fmt=%s\n", *(char**)(($esp+8))
+bt 6
+continue
+end
+continue

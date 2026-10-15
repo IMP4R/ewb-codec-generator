@@ -1,0 +1,12 @@
+set pagination off
+set architecture i386
+break *0x486f9e
+commands
+silent
+printf "\n=== EwbFileSave hit\n"
+info registers
+x/16xw $esp
+bt 8
+continue
+end
+continue

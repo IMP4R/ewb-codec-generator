@@ -1,0 +1,39 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach PIDHERE
+set $p = (int)mmap(0, 0x40000, 3, 0x22, -1, 0)
+restore /tmp/inject.bin binary $p
+set $inj = $p
+set $idx = 0
+set $rem = REMHERE
+set $hits = 0
+set $inj_len_minus = LENM1
+# 0x4aa023 = call memcpy(dest, src, len); стек: [esp]=dest, [esp+4]=src, [esp+8]=len
+# Меняем ТОЛЬКО источник. Длину оставляет EWB — не вмешиваемся в его поток.
+break *0x4aa023
+commands
+silent
+set $hits = $hits + 1
+set $len = *(int*)($esp + 8)
+if $rem > 0
+  if $rem > $len
+    set $take = $len
+  else
+    set $take = $rem
+  end
+  set *(int*)($esp + 4) = $inj + $idx
+  set $idx = $idx + $take
+  set $rem = $rem - $take
+  # если наш текст кончился раньше — дописываем недостающее нулями из хвоста буфера
+  if $rem <= 0
+    set *(int*)($esp + 4) = $inj + $inj_len_minus
+  end
+else
+  set *(int*)($esp + 4) = $inj + $inj_len_minus
+end
+printf "INJECT hit=%d len=%d take=%d idx=%d\n", $hits, $len, $take, $idx
+continue
+end
+continue

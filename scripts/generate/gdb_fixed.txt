@@ -1,0 +1,38 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach PIDHERE
+set $p = (int)mmap(0, 0x40000, 3, 0x22, -1, 0)
+restore /tmp/inject.bin binary $p
+set $inj = $p
+set $idx = 0
+set $rem = REMHERE
+set $dest = 0
+set $plen = 0
+break *0x4a9fdd
+commands
+silent
+set $dest = $edi
+set $plen = $esi
+continue
+end
+break *0x4aa02b
+commands
+silent
+if $rem > 0
+  if $rem > 1024
+    set $n2 = 1024
+  else
+    set $n2 = $rem
+  end
+  set $rc = (int)0x54cc10($dest, $inj + $idx, $n2)
+  set $idx = $idx + $n2
+  set $rem = $rem - $n2
+else
+  set $n2 = 0
+end
+set *(int*)$plen = $n2
+continue
+end
+continue

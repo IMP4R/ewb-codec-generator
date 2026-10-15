@@ -1,0 +1,33 @@
+set pagination off
+set architecture i386
+handle SIGUSR1 nostop noprint pass
+handle SIGUSR2 nostop noprint pass
+attach PIDHERE
+set $p = (int)mmap(0, 0x40000, 3, 0x22, -1, 0)
+restore /tmp/inject.bin binary $p
+set $inj = $p
+set $sw = SWITCHAT
+set $idx = 0
+set $hits = 0
+# 0x4aa023 = call memcpy(dest, src, len)
+# Подменяем источник только пока не вышли за границу своей вставки.
+# Дальше оставляем src EWB — он продолжает свой собственный текст.
+break *0x4aa023
+commands
+silent
+set $hits = $hits + 1
+set $len = *(int*)($esp + 8)
+if $len > 0 && $idx < $sw
+  set $src = $inj + $idx
+  set $avail = $sw - $idx
+  if $avail < $len
+    set *(int*)($esp + 8) = $avail
+    set $len = $avail
+  end
+  set *(int*)($esp + 4) = $src
+  set $idx = $idx + $len
+end
+printf "INJECT hit=%d len=%d idx=%d\n", $hits, $len, $idx
+continue
+end
+continue

@@ -1,0 +1,15 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  printf "FIRST BIG WRITE len=%d\n", $edx
+  gcore /tmp/core4
+  detach
+  quit
+end
+continue
+end
+continue

@@ -1,0 +1,1642 @@
+Project_5_1 
+{ 
+  CircuitHeader 
+  { 
+    InternalCircuitVersion i 511 
+    ZoomFactor i 80 
+    VersionSpecific 
+    { 
+      SerialNo R "\"RBS-1999-RBS\""
+        "" 
+      Version R "Version 5.12" 
+      Ewb_Restrictions 
+      { 
+        Name R "Global Restrictions" 
+        CircPass R "" 
+        Path R "c:\\ewb" 
+        RelaxAll i 0 
+        Override i 0 
+        NoPrint i 0 
+        ReadOnly i 0 
+        NoFaults i 0 
+        NoSub i 0 
+        NoValues i 0 
+        NoModel i 0 
+        NoDisp i 0 
+        NoCAnal i 0 
+        NoParts i 0 
+        NoInst i 0 
+        NoFav i 0 
+        PBOpt i 0 
+        ANOpt i 1 
+        NoAnal i:14 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+      }
+    }
+    Library 
+    { 
+      Name R "$" 
+      Elements 
+      { 
+        ExtComp 
+        { 
+          Name R "CHIP:7493" 
+          Position i:3 0 274 -620 
+          ModelUnits i:1 0 
+          Common 
+          { 
+            RefID A "U2" 
+          }
+          Data R "7493" 
+          ModelName R "ideal" 
+          Status i 0 
+        }
+      }
+    }
+    PrintSettings 
+    { 
+      Choices i:13 1 0 0 0 0 0 0 0 0 0 0 0 0 
+      WkSpacePageBrk i 0 
+      MacroPageBrk i 0 
+      PrintZoom i 2000 
+    }
+  }
+  Circuit 
+  { 
+    Models 
+    { 
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 17 
+        Params r:7 1e-14 0 0 1 0 0.5 0.01 
+      }
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 99 
+        Params r:19 5 0 0 0 0 0 0 1e+06 0 0 2.5 2.5 4e-09 4e-09 1e-08 1e-08 -10 10 2.5 
+      }
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 4 
+        Params r:15 1e-14 0 0 1 0 0.5 1e+30 1 1.11 3 0 1 0.5 0.001 27 
+      }
+    }
+    Preferences 
+    { 
+      Mode i 16 
+      Info i:10 1 0 100 1 0 1 1 1 10485760 0 
+      ShowNodes i 0 
+      Fonts 
+      { 
+        Label 
+        { 
+          Name R "Arial" 
+          Size i -15 
+          Type i 0 
+          Color i 16711680 
+        }
+        Model 
+        { 
+          Name R "Arial" 
+          Size i -15 
+          Type i 0 
+          Color i 16711680 
+        }
+      }
+      Wiring 
+      { 
+        Manual i 0 
+        Auto i 1 
+        AutoModed i 0 
+        Reroute i 1 
+        Still i 0 
+        AutoDelete i 1 
+      }
+    }
+    Elements 
+    { 
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 1594 748 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "11" 
+        }
+        Status i 0 
+        m_tptrElem A "WGen^16" 
+        m_flags i 8 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2284 668 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "10" 
+        }
+        Status i 0 
+        m_tptrElem A "R1^0" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2333 594 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "9" 
+        }
+        Status i 0 
+        m_tptrElem A "R1^2" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2283 604 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "8" 
+        }
+        Status i 0 
+        m_tptrElem A "R1^3" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2314 504 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "7" 
+        }
+        Status i 0 
+        m_tptrElem A "R2^1" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 1884 868 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "6" 
+        }
+        Status i 0 
+        m_tptrElem A "Logic^3" 
+        m_flags i 8 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 1864 838 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "5" 
+        }
+        Status i 0 
+        m_tptrElem A "Logic^4" 
+        m_flags i 8 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 1854 818 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "4" 
+        }
+        Status i 0 
+        m_tptrElem A "Logic^5" 
+        m_flags i 8 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 1844 878 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "3" 
+        }
+        Status i 0 
+        m_tptrElem A "Logic^6" 
+        m_flags i 8 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2034 657 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "2" 
+        }
+        Status i 0 
+        m_tptrElem A "U1^0" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Comp 
+      { 
+        PartNum i 39 
+        Position i:3 0 2272 734 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "1" 
+        }
+        Status i 0 
+        m_tptrElem A "R3^0" 
+        m_flags i 0 
+        m_i_cond r 0 
+        m_i_nri r 0 
+      }
+      Instrument 
+      { 
+        PartNum i 6 
+        Pos i:3 0 1468 764 
+      }
+      Comp 
+      { 
+        PartNum i 20 
+        Position i:3 0 2346 569 
+        Value r:4 0.001 0.005 0.0025 1e-06 
+        ModelUnits i:4 -1 0 0 0 
+        Common 
+        { 
+          RefID A "R1" 
+        }
+        ModelName R "" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 1 
+        Position i:3 0 2244 469 
+        Value r:5 1 0 0 0 0 
+        ModelUnits i:5 1 0 0 0 0 
+        Common 
+        { 
+          RefID A "R2" 
+        }
+        ModelName R "" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 17 
+        Position i:3 7 2288 509 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "D1" 
+        }
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1723 619 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN1" 
+        }
+        Status i 0 
+      }
+      Instrument 
+      { 
+        PartNum i 7 
+        Pos i:3 0 1818 944 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 1708 555 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "0" 
+        }
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Volt" 
+        Position i:3 1 1792 519 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 2188 432 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "0" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 0 2188 535 
+        Value r:3 12 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V1" 
+        }
+        ModelName R "" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2203 479 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN2" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1833 859 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN3" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1873 849 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN4" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1843 799 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN5" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1583 729 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN6" 
+        }
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 3 1598 899 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 3 1648 899 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 3 1698 899 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U4" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 3 1738 899 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U5" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1853 819 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN7" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2203 599 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN8" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2273 649 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN9" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 1 
+        Position i:3 5 2268 675 
+        Value r:5 1 0 0 0 0 
+        ModelUnits i:5 1 0 0 0 0 
+        Common 
+        { 
+          RefID A "R3" 
+        }
+        ModelName R "" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 4 
+        Position i:3 1 2198 619 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "D2" 
+        }
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2153 709 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN10" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2133 719 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN11" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2123 729 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN12" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2013 739 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN13" 
+        }
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And4" 
+        Position i:3 0 2194 709 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U6" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1673 689 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN14" 
+        }
+        Status i 0 
+        Label R "IN(A)" 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2153 809 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN15" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2133 779 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN16" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2123 759 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN17" 
+        }
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2013 769 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN18" 
+        }
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Seg7D" 
+        Position i:3 0 2118 832 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U7" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2013 689 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CONN19" 
+        }
+        Status i 0 
+      }
+      ExtComp 
+      { 
+        Name R "CHIP:7493" 
+        Position i:3 0 1846 559 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "U8" 
+        }
+        Data R "chips\\7493" 
+        ModelName R "ideal" 
+        Status i 0 
+      }
+    }
+    Wires 
+    { 
+      wire 
+      { 
+        pos i:4 11 16 25 1 
+        segs i:8 1 14 8 31 4 74 8 4 
+        colour i 0 
+        wire_id i 0 
+        node_p A "11" 
+        x_factor r 0.909091 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 12 0 32 3 
+        segs i:4 4 68 2 15 
+        colour i 0 
+        wire_id i 0 
+        node_p A "10" 
+        x_factor r 0.894737 
+        y_factor r 1.36364 
+      }
+      wire 
+      { 
+        pos i:4 12 1 31 2 
+        segs i:6 4 109 8 10 4 24 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.985185 
+        y_factor r 0.833333 
+      }
+      wire 
+      { 
+        pos i:4 13 0 21 2 
+        segs i:6 4 28 2 10 4 3 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.939394 
+        y_factor r 1.25 
+      }
+      wire 
+      { 
+        pos i:4 14 0 12 2 
+        segs i:4 2 30 1 38 
+        colour i 0 
+        wire_id i 0 
+        node_p A "9" 
+        x_factor r 0.863636 
+        y_factor r 0.967742 
+      }
+      wire 
+      { 
+        pos i:4 14 1 13 1 
+        segs i:4 8 40 4 4 
+        colour i 0 
+        wire_id i 0 
+        node_p A "7" 
+        x_factor r 2 
+        y_factor r 1.02564 
+      }
+      wire 
+      { 
+        pos i:4 15 1 47 1 
+        segs i:4 2 85 1 118 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.983333 
+        y_factor r 1.07595 
+      }
+      wire 
+      { 
+        pos i:4 15 2 47 2 
+        segs i:6 1 98 2 70 1 15 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.982609 
+        y_factor r 1.09375 
+      }
+      wire 
+      { 
+        pos i:4 16 3 23 1 
+        segs i:8 4 19 8 211 1 69 8 4 
+        colour i 6 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 1.19048 
+        y_factor r 1.00939 
+      }
+      wire 
+      { 
+        pos i:4 16 4 30 1 
+        segs i:8 4 18 8 231 1 48 8 4 
+        colour i 11 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 1.15385 
+        y_factor r 1.03524 
+      }
+      wire 
+      { 
+        pos i:4 16 5 24 1 
+        segs i:8 4 17 8 241 1 37 8 4 
+        colour i 5 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 1.11111 
+        y_factor r 1.0166 
+      }
+      wire 
+      { 
+        pos i:4 16 6 22 1 
+        segs i:8 4 80 8 171 1 90 8 4 
+        colour i 14 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 5 
+        y_factor r 1.0479 
+      }
+      wire 
+      { 
+        pos i:4 17 0 15 3 
+        segs i:2 2 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.90625 
+        y_factor r 0.90625 
+      }
+      wire 
+      { 
+        pos i:4 18 0 47 0 
+        segs i:10 1 186 2 227 4 195 8 107 1 13 
+        colour i 0 
+        wire_id i 0 
+        node_p A "2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 20 0 12 3 
+        segs i:4 2 14 1 138 
+        colour i 0 
+        wire_id i 0 
+        node_p A "8" 
+        x_factor r 0.985714 
+        y_factor r 0.933333 
+      }
+      wire 
+      { 
+        pos i:4 20 1 21 1 
+        segs i:2 8 41 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 0.97619 
+        y_factor r 0.97619 
+      }
+      wire 
+      { 
+        pos i:4 21 0 31 0 
+        segs i:6 4 18 2 120 1 18 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 21 3 19 0 
+        segs i:2 8 12 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1.2 
+        y_factor r 1.2 
+      }
+      wire 
+      { 
+        pos i:4 25 2 16 7 
+        segs i:6 1 212 2 300 1 23 
+        colour i 0 
+        wire_id i 0 
+        node_p A "11" 
+        x_factor r 0.975104 
+        y_factor r 1.00671 
+      }
+      wire 
+      { 
+        pos i:4 26 0 24 0 
+        segs i:8 2 178 1 194 8 308 1 31 
+        colour i 0 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 0.991189 
+        y_factor r 0.992366 
+      }
+      wire 
+      { 
+        pos i:4 27 0 30 0 
+        segs i:12 2 188 1 214 8 308 4 32 2 10 1 3 
+        colour i 0 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 0.989305 
+        y_factor r 1.02804 
+      }
+      wire 
+      { 
+        pos i:4 28 0 23 0 
+        segs i:12 2 179 1 165 8 268 4 14 2 9 1 4 
+        colour i 0 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 1 
+        y_factor r 0.963855 
+      }
+      wire 
+      { 
+        pos i:4 29 0 22 0 
+        segs i:8 2 197 1 54 8 267 1 21 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 1.1194 
+        y_factor r 1.04478 
+      }
+      wire 
+      { 
+        pos i:4 32 1 33 1 
+        segs i:2 2 11 
+        colour i 0 
+        wire_id i 0 
+        node_p A "10" 
+        x_factor r 0.785714 
+        y_factor r 0.785714 
+      }
+      wire 
+      { 
+        pos i:4 33 0 39 4 
+        segs i:4 8 6 4 24 
+        colour i 0 
+        wire_id i 0 
+        node_p A "1" 
+        x_factor r 1.5 
+        y_factor r 2 
+      }
+      wire 
+      { 
+        pos i:4 34 0 31 1 
+        segs i:6 8 13 4 10 2 8 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1.25 
+        y_factor r 0.833333 
+      }
+      wire 
+      { 
+        pos i:4 34 1 32 0 
+        segs i:4 8 0 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "10" 
+        x_factor r 1.07843 
+        y_factor r 0 
+      }
+      wire 
+      { 
+        pos i:4 35 2 39 3 
+        segs i:6 1 19 8 10 1 12 
+        colour i 0 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 0.794872 
+        y_factor r 1.25 
+      }
+      wire 
+      { 
+        pos i:4 37 2 39 1 
+        segs i:2 1 61 
+        colour i 0 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 0.968254 
+        y_factor r 0.968254 
+      }
+      wire 
+      { 
+        pos i:4 38 2 39 0 
+        segs i:2 1 171 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.977143 
+        y_factor r 0.977143 
+      }
+      wire 
+      { 
+        pos i:4 38 3 46 1 
+        segs i:2 8 40 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.869565 
+        y_factor r 0.869565 
+      }
+      wire 
+      { 
+        pos i:4 39 2 36 2 
+        segs i:6 4 37 2 10 4 14 
+        colour i 0 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 0.927273 
+        y_factor r 1.66667 
+      }
+      wire 
+      { 
+        pos i:4 40 0 25 3 
+        segs i:4 4 85 2 35 
+        colour i 0 
+        wire_id i 0 
+        node_p A "11" 
+        x_factor r 0.934066 
+        y_factor r 1.2963 
+      }
+      wire 
+      { 
+        pos i:4 40 2 47 3 
+        segs i:10 1 160 2 77 1 199 8 37 4 16 
+        colour i 0 
+        wire_id i 0 
+        node_p A "11" 
+        x_factor r 1 
+        y_factor r 1.25 
+      }
+      wire 
+      { 
+        pos i:4 41 0 23 3 
+        segs i:4 4 275 2 35 
+        colour i 6 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 41 3 35 1 
+        segs i:2 8 90 
+        colour i 0 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 1.04651 
+        y_factor r 1.04651 
+      }
+      wire 
+      { 
+        pos i:4 42 0 30 3 
+        segs i:12 4 110 2 51 4 160 8 23 4 5 2 7 
+        colour i 11 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 42 3 36 1 
+        segs i:2 8 50 
+        colour i 0 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 0.925926 
+        y_factor r 0.925926 
+      }
+      wire 
+      { 
+        pos i:4 43 0 24 3 
+        segs i:4 4 275 2 35 
+        colour i 5 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 43 3 37 1 
+        segs i:2 8 20 
+        colour i 0 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 1.42857 
+        y_factor r 1.42857 
+      }
+      wire 
+      { 
+        pos i:4 44 0 22 3 
+        segs i:4 4 175 2 85 
+        colour i 14 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.977654 
+        y_factor r 1.0241 
+      }
+      wire 
+      { 
+        pos i:4 44 1 45 0 
+        segs i:6 2 31 1 150 2 17 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.986842 
+        y_factor r 1.09091 
+      }
+      wire 
+      { 
+        pos i:4 44 3 38 1 
+        segs i:2 8 20 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.909091 
+        y_factor r 0.909091 
+      }
+      wire 
+      { 
+        pos i:4 45 1 41 1 
+        segs i:2 8 8 
+        colour i 0 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 0.666667 
+        y_factor r 0.666667 
+      }
+      wire 
+      { 
+        pos i:4 45 2 42 1 
+        segs i:2 8 38 
+        colour i 0 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 1.05556 
+        y_factor r 1.05556 
+      }
+      wire 
+      { 
+        pos i:4 45 3 43 1 
+        segs i:2 8 58 
+        colour i 0 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 0.966667 
+        y_factor r 0.966667 
+      }
+      wire 
+      { 
+        pos i:4 47 4 46 0 
+        segs i:6 4 16 8 40 1 183 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 1.02454 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 47 5 46 3 
+        segs i:8 1 10 8 9 4 18 2 4 
+        colour i 0 
+        wire_id i 0 
+        node_p A "3" 
+        x_factor r 0.666667 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 47 6 35 3 
+        segs i:4 1 132 2 75 
+        colour i 0 
+        wire_id i 0 
+        node_p A "6" 
+        x_factor r 1.06452 
+        y_factor r 0.949367 
+      }
+      wire 
+      { 
+        pos i:4 47 7 36 3 
+        segs i:4 1 112 2 105 
+        colour i 0 
+        wire_id i 0 
+        node_p A "5" 
+        x_factor r 1.03704 
+        y_factor r 0.981308 
+      }
+      wire 
+      { 
+        pos i:4 47 8 37 3 
+        segs i:4 1 102 2 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "4" 
+        x_factor r 1.02 
+        y_factor r 0.873016 
+      }
+    }
+    InstSettings 
+    { 
+      MultiMeter 
+      { 
+        Mode i 2 
+        InpType i 2 
+        Value r:4 1 1 1 1 
+        Scale i:4 1 3 1 2 
+      }
+      FuncGen 
+      { 
+        Mode i 1 
+        Wave r:4 1 50 10 0 
+        Symmetry i -1 
+        Units i:2 0 2 
+      }
+      Oscilloscope 
+      { 
+        Pos i:6 0 29 1 4 0 1 
+        Value i:6 17 0 3 17 0 3 
+        Size i 0 
+      }
+      Bode 
+      { 
+        Data i:15 -1 -1 0 30 8 10 0 30 1 1 1 10 1 50 2 
+      }
+      WordGen 
+      { 
+        Pattern 
+        { 
+          Initial i 0 
+          Final i 15 
+        }
+        Data i:5 3 1 1 50 0 
+      }
+      TruthTable 
+      { 
+        BoolExpr A "" 
+        Mask i 0 
+      }
+      LogicAnalyzer 
+      { 
+        Values i:5 1 28 0 2 2 
+        ClockMode i 0 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        ClksPerDiv i 0 
+        LogicFrequency r:16 10 1 5.94159e-313 4.24399e-314 1.84463e-305 5.30245e-307 2.97085e-312 5.32741e-307 8.88485e-303 8.79705e-303 8.87497e-303 1.84466e-305 2.96607e-304 7.50179e-303 1.8447e-305 5.33269e-307 
+      }
+    }
+    WindowInfo 
+    { 
+      Position i:14 0 3 27 794 433 -7 0 2394 1700 35 22 581 68 1 
+    }
+    InstPos 
+    { 
+      Oscilloscope i:3 0 22 1 
+      MultiMeter i:3 11 24 1 
+      FuncGen i:3 6 12 1 
+      Oscilloscope i:3 6 10 1 
+      Bode i:3 158 0 1 
+      TruthTable i:3 0 0 1 
+      LogicAnalyzer i:3 174 0 1 
+      WordGen i:3 52 0 1 
+    }
+    PBPos 
+    { 
+      PBNum i:6 0 0 0 70 62 132 
+      PBNum i:6 1 0 55 70 453 167 
+      PBNum i:6 2 0 86 70 453 167 
+      PBNum i:6 3 0 117 70 383 132 
+      PBNum i:6 4 0 148 70 422 167 
+      PBNum i:6 5 0 187 70 383 132 
+      PBNum i:6 6 0 218 70 383 132 
+      PBNum i:6 7 0 249 70 445 132 
+      PBNum i:6 8 0 288 70 608 167 
+      PBNum i:6 9 0 319 70 546 167 
+      PBNum i:6 10 0 358 70 655 132 
+      PBNum i:6 11 0 389 70 795 132 
+      PBNum i:6 12 0 371 70 800 132 
+      PBNum i:6 13 0 459 70 686 132 
+      PBNum i:6 14 0 0 458 58 512 
+      PBNum i:6 15 0 0 458 58 512 
+      PBNum i:6 16 0 0 458 58 512 
+      PBNum i:6 17 0 0 458 58 512 
+    }
+    AnalysisValues 
+    { 
+      Fourier 
+      { 
+        FundFreq r 1000 
+        FundFreqUnits i 1 
+        SmplFreq r 18000 
+        SmplFreqUnits i 1 
+        NumHarm i 9 
+        VertScale i 0 
+        InterpPts i 1 
+        PhaseUsed i 0 
+        LineGraphUsed i 0 
+        AdvancedUsed i 0 
+        Node A 0 
+        TransientOptions 
+        { 
+          UIC i 2 
+          StartTime r 0.001 
+          StopTime r 0.005 
+          TimeStepUsed i 0 
+          TimePoints i 100 
+          TimeStep r 1e-05 
+          MaxStepUsed i 0 
+          MaxStep r 1e-05 
+          AutoStepsUsed i 1 
+        }
+      }
+      ACanalysis 
+      { 
+        StartFreq r 1 
+        StartFreqUnits i 0 
+        StopFreq r 1e+10 
+        StopFreqUnits i 3 
+        SweepType i 0 
+        NumberSteps i 100 
+        VertScale i 1 
+        Nodes 
+        { 
+          Size i 0 
+        }
+      }
+      DCsweep 
+      { 
+        Source1 A 0 
+        Source1start r 0 
+        Source1stop r 1 
+        Source1incr r 0.5 
+        Source2 A 0 
+        Source2start r 0 
+        Source2stop r 1 
+        Source2incr r 0.5 
+        Source2used i 0 
+        Node A 0 
+      }
+      Distortion 
+      { 
+        StartFreq r 1 
+        StartFreqUnits i 0 
+        StopFreq r 1e+10 
+        StopFreqUnits i 3 
+        SweepType i 0 
+        NumberSteps i 100 
+        VertScale i 1 
+        F1OverF2Used i 0 
+        F1OverF2 r 0.9 
+        Nodes 
+        { 
+          Size i 0 
+        }
+      }
+      Noise 
+      { 
+        StartFreq r 1 
+        StartFreqUnits i 0 
+        StopFreq r 1e+10 
+        StopFreqUnits i 3 
+        SweepType i 0 
+        NumberSteps i 100 
+        VertScale i 1 
+        Source A 0 
+        Node A 0 
+        RefNode A 0 
+        PtsPerSummaryUsed i 0 
+        PtsPerSummary i 1 
+        SummaryGenerator A 0 
+      }
+      ParameterSweep 
+      { 
+        Component A 0 
+        Parameter i 0 
+        ParamStart r 0 
+        ParamEnd r 1 
+        ParamIncr r 0.5 
+        ParamSweep i 1 
+        Node A 0 
+        DCanalysis i 0 
+        TRANanalysis i 1 
+        ACanalysis i 0 
+        TransientOptions 
+        { 
+          UIC i 2 
+          StartTime r 0 
+          StopTime r 0.001 
+          TimeStepUsed i 0 
+          TimePoints i 100 
+          TimeStep r 1e-05 
+          MaxStepUsed i 0 
+          MaxStep r 1e-05 
+          AutoStepsUsed i 1 
+        }
+        ACoptions 
+        { 
+          StartFreq r 1 
+          StartFreqUnits i 0 
+          StopFreq r 1e+10 
+          StopFreqUnits i 3 
+          SweepType i 0 
+          NumberSteps i 100 
+          VertScale i 1 
+        }
+      }
+      TransferFunction 
+      { 
+        InSource A 0 
+        Voltage i 1 
+        Node A 0 
+        RefNode A 0 
+        OutSource A 0 
+      }
+      PoleZero 
+      { 
+        NodeI A 0 
+        NodeG A 0 
+        NodeJ A 0 
+        NodeK A 0 
+        Voltage i 1 
+        Current i 0 
+        InputImpedance i 0 
+        OutputImpedance i 0 
+        FindPoles i 0 
+        FindZeroes i 0 
+        FindBoth i 1 
+      }
+      MonteCarlo 
+      { 
+        NumberOfRuns i 2 
+        Tolerance r 5 
+        Seed r 0 
+        Distribution i 0 
+        Collate i 0 
+        Threshold r 1 
+        Node A 0 
+        DCanalysis i 0 
+        TRANanalysis i 1 
+        ACanalysis i 0 
+        TransientOptions 
+        { 
+          UIC i 2 
+          StartTime r 0 
+          StopTime r 0.001 
+          TimeStepUsed i 0 
+          TimePoints i 100 
+          TimeStep r 1e-05 
+          MaxStepUsed i 0 
+          MaxStep r 1e-05 
+          AutoStepsUsed i 1 
+        }
+        ACoptions 
+        { 
+          StartFreq r 1 
+          StartFreqUnits i 0 
+          StopFreq r 1e+10 
+          StopFreqUnits i 3 
+          SweepType i 0 
+          NumberSteps i 100 
+          VertScale i 1 
+        }
+      }
+      TemperatureSweep 
+      { 
+        TempStart r 27 
+        TempEnd r 27 
+        TempIncr r 1 
+        TempSweep i 1 
+        Node A 0 
+        DCanalysis i 0 
+        TRANanalysis i 1 
+        ACanalysis i 0 
+        TransientOptions 
+        { 
+          UIC i 2 
+          StartTime r 0 
+          StopTime r 0.001 
+          TimeStepUsed i 0 
+          TimePoints i 100 
+          TimeStep r 1e-05 
+          MaxStepUsed i 0 
+          MaxStep r 1e-05 
+          AutoStepsUsed i 1 
+        }
+        ACoptions 
+        { 
+          StartFreq r 1 
+          StartFreqUnits i 0 
+          StopFreq r 1e+10 
+          StopFreqUnits i 3 
+          SweepType i 0 
+          NumberSteps i 100 
+          VertScale i 1 
+        }
+      }
+      Transient 
+      { 
+        UIC i 2 
+        StartTime r 0 
+        StopTime r 0.001 
+        TimeStepUsed i 0 
+        TimePoints i 100 
+        TimeStep r 1e-05 
+        MaxStepUsed i 0 
+        MaxStep r 1e-05 
+        AutoStepsUsed i 1 
+        Nodes 
+        { 
+          Size i 0 
+        }
+      }
+    }
+    GrapherInfo 
+    { 
+      Shown i 0 
+    }
+    SimulationOptions 
+    { 
+      tolerance r 0.1 
+      time_step r 27 
+      abstol r 1e-12 
+      chgtol r 1e-14 
+      convabsstep r 0.1 
+      convstep r 0.25 
+      defad r 0 
+      defas r 0 
+      defl r 0.0001 
+      defw r 0.0001 
+      gmin r 1e-12 
+      pivrel r 0.001 
+      pivtol r 1e-13 
+      ramptime r 0 
+      reltol r 0.01 
+      rshunt r 1e+09 
+      temp r 27 
+      tnom r 27 
+      trtol r 7 
+      vntol r 1e-06 
+      tstep r 1e-05 
+      tmax r 1e-05 
+      thresh_volt r 3.5 
+      globTemp r 27 
+      bode_num_points i 100 
+      auto_tmax i 1 
+      tmax_enab i 0 
+      tpoints i 100 
+      uic i 2 
+      display_opt_enab i 0 
+      pre_trigger i 100 
+      post_trigger i 1000 
+      noopalter i 1 
+      convlimit i 1 
+      out_of_memory i 0 
+      steady_state i 1 
+      precision i 1 
+      force_AC i 0 
+      zero_init_cond i 0 
+      time_step_index i 0 
+      iterations i 100 
+      anal_auto i 0 
+      pause_at_end_of_screen i 0 
+      num_points i 100 
+      same_steps i 0 
+      convabstep_enab i 0 
+      convstep_enab i 0 
+      gminsteps i 10 
+      itl1 i 1000 
+      itl2 i 50 
+      itl4 i 100 
+      itl6 i 10 
+      maxevtiter_enab i 0 
+      maxevtiter i 2000 
+      maxopalter_enab i 0 
+      maxopalter i 1000 
+      maxord i 2 
+      rshunt_enab i 1 
+      srcsteps i 10 
+      acct i 0 
+      bypass i 1 
+      noOpIter i 0 
+      tryToCompact i 0 
+      integrateMethod i 1 
+      eng_notation i 1 
+    }
+  }
+}

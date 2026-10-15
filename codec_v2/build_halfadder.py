@@ -1,0 +1,28 @@
+"""Native half-adder: 5V SPDT inputs, two logic gates and red output probes."""
+from digital_network import *
+def halfadder():
+ n=DigitalNetwork()
+ sa=n.add(38,900,1030,0,[49],'SA',label='A');sb=n.add(38,900,730,0,[50],'SB',label='B')
+ # Switch0 common,left; switch1 low,rightbottom; switch2 high,righttop.
+ supply=n.add(2,780,1160,3,[5,0,0],'VCC',unit=2)
+ supplyg=n.ground(735,1180)
+ higha=n.junction(920,1120,'VCC_A');highb=n.junction(760,1120,'VCC_BUS')
+ ga=n.ground(960,920);gb=n.ground(960,620)
+ ja=n.junction(1030,1000,'A_BUS');jb=n.junction(1070,700,'B_BUS')
+ sx=n.addgate('Xor2',1250,950,'G1','SUM');cy=n.addgate('And2',1250,820,'G2','CARRY')
+ ps=n.addgate('ProbeR',1450,950,'S','S',orientation=2);pc=n.addgate('ProbeR',1450,820,'C','C',orientation=2)
+ n.connect(supply,1,supplyg,0,'0',[(735,1150)])
+ n.connect(supply,0,highb,1,'VCC',[(850,1150),(850,1125)])
+ n.connect(highb,2,higha,0,'VCC')
+ n.connect(higha,3,sa,2,'VCC')
+ n.connect(highb,3,sb,2,'VCC',[(760,760)])
+ n.connect(sa,1,ga,0,'0',[(960,1040)]);n.connect(sb,1,gb,0,'0',[(960,740)])
+ n.connect(sa,0,ja,0,'A',[(990,1050),(990,1000)])
+ n.connect(sb,0,jb,0,'B',[(990,750),(990,700)])
+ n.connect(ja,2,sx,0,'A',[(1180,1000),(1180,960)])
+ n.connect(ja,3,cy,0,'A',[(1030,830)])
+ n.connect(jb,2,cy,1,'B',[(1190,700),(1190,810)])
+ n.connect(jb,1,sx,1,'B',[(1070,940)])
+ n.connect(sx,2,ps,0,'SUM');n.connect(cy,2,pc,0,'CARRY')
+ return n.emit('HalfAdder.native.ewb',90)
+if __name__=='__main__':print(halfadder())

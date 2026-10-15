@@ -1,0 +1,18 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  set $c1 = *(unsigned int*)$ecx
+  if $c1 == 0x63656c45
+    printf "FILEWRITE len=%d esp=%p\n", $edx, $esp
+    dump binary memory /tmp/stack.bin $esp ($esp + 65536)
+    detach
+    quit
+  end
+end
+continue
+end
+continue

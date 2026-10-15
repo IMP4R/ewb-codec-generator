@@ -1,0 +1,127 @@
+[
+  {
+    "file": "/Users/user0/ewb_rev/codec_v2/F1_min_NOR_exact.ewb",
+    "actual": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "status": "PASS",
+    "method": "native EWB byte decode + pin connectivity; not live simulation"
+  },
+  {
+    "file": "/Users/user0/ewb_rev/codec_v2/F1_SKNF_exact.ewb",
+    "actual": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "status": "PASS",
+    "method": "native EWB byte decode + pin connectivity; not live simulation"
+  },
+  {
+    "file": "/Users/user0/ewb_rev/codec_v2/F1_SDNF_exact.ewb",
+    "actual": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "status": "PASS",
+    "method": "native EWB byte decode + pin connectivity; not live simulation"
+  },
+  {
+    "file": "/Users/user0/ewb_rev/codec_v2/F1_min_NAND_exact.ewb",
+    "actual": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "status": "PASS",
+    "method": "native EWB byte decode + pin connectivity; not live simulation"
+  },
+  {
+    "file": "/Users/user0/ewb_rev/codec_v2/F1_min_ANDORNOT_exact.ewb",
+    "actual": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "expected": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "status": "PASS",
+    "method": "native EWB byte decode + pin connectivity; not live simulation"
+  }
+]

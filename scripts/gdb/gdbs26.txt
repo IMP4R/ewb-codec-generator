@@ -1,0 +1,12 @@
+set pagination off
+set architecture i386
+attach 2062406
+break *0x4aa04e
+commands
+silent
+printf "SINK len=%d\n", *(int*)$esi
+# печатаем до 96 байт буфера
+x/96cb $edi
+continue
+end
+continue

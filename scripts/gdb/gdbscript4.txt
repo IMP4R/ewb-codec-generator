@@ -1,0 +1,13 @@
+set pagination off
+set architecture i386
+attach 2046719
+break *0x486f9e
+break *0x486ba0
+break *0x486db9
+commands 1-3
+silent
+printf "\n=== HIT SAVE FN\n"
+bt 5
+continue
+end
+continue

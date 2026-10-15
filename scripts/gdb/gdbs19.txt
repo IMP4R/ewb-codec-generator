@@ -1,0 +1,18 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  printf "BIG len=%d\n", $edx
+  set $n = $n + 1
+  if $n == 2
+    gcore /tmp/core5
+    detach
+    quit
+  end
+end
+continue
+end
+continue

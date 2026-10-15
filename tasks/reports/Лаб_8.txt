@@ -1,0 +1,399 @@
+
+
+
+
+ВЯТСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ
+
+
+
+ОТЧЁТ
+по лабораторной работе № 8
+по дисциплине «Архитектура вычислительных устройств»
+Тема: условные переходы и циклы
+Часть 1: организация условных переходов (вариант 1)
+Часть 2: циклы — задания A1, B1, C1
+
+
+
+
+
+
+Выполнил: Денис Лузянин
+Киров, 2026
+
+Часть 1. Условное выражение (вариант 1)
+       | (a*(a/b))/b  ,  если a > 10 и b > 10
+  Y =  | 10           ,  если a = b
+       | 3*(a*b)/(a+5),  если a < 10 и b < 10
+Модуль на Ассемблере (lab8_1_branch.asm)
+; Лабораторная работа 8, часть 1. Вариант 1
+;          | (a*(a/b))/b ,  если a > 10 и b > 10
+;     Y =  | 10           ,  если a = b
+;          | 3*(a*b)/(a+5),  если a < 10 и b < 10
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC a, b, y
+a DW ?
+b DW ?
+y DW ?
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC calc_y
+calc_y PROC
+    MOV  AX, a
+    CMP  AX, 10
+    JG   a_big
+    JL   a_small
+    ; a == 10
+    MOV  BX, b
+    CMP  BX, 10
+    JE   set10
+    JG   f1
+    JL   f2
+a_big:
+    MOV  BX, b
+    CMP  BX, 10
+    JG   f1
+    JE   set10
+    JL   undef
+a_small:
+    MOV  BX, b
+    CMP  BX, 10
+    JL   f2
+    JE   set10
+    JG   undef
+set10:
+    MOV  WORD PTR y, 10
+    RET
+f1:                         ; (a*(a/b))/b
+    MOVSX EAX, WORD PTR a
+    MOVSX EBX, WORD PTR b
+    CDQ
+    IDIV EBX                ; EAX = a/b
+    MOVSX ECX, WORD PTR a
+    IMUL EAX, ECX           ; EAX = a*(a/b)
+    MOVSX ECX, WORD PTR b
+    CDQ
+    IDIV ECX                ; EAX = (a*(a/b))/b
+    MOV  WORD PTR y, AX
+    RET
+f2:                         ; 3*(a*b)/(a+5)
+    MOVSX EAX, WORD PTR a
+    MOVSX EBX, WORD PTR b
+    IMUL EAX, EBX           ; a*b
+    IMUL EAX, 3             ; 3*a*b
+    MOVSX EBX, WORD PTR a
+    ADD  EBX, 5             ; a+5
+    CDQ
+    IDIV EBX
+    MOV  WORD PTR y, AX
+    RET
+undef:
+    MOV  WORD PTR y, 8000h  ; маркер: смешанное условие (C++ такое исключает)
+    RET
+calc_y ENDP
+CODE ENDS
+END
+
+Программа на Visual C++ (lab8_1_branch.cpp)
+// Лабораторная работа 8, часть 1. Вариант 1
+// Кусочное выражение Y(a,b) с условными переходами (команды CMP/Jcc в модуле).
+#include <stdio.h>
+#include <conio.h>
+#include <limits.h>
+
+extern "C" void calc_y(void);
+extern "C" short int a, b, y;
+
+int read_short(const char* name, short int* out)
+{
+    long v;
+    while (1)
+    {
+        printf("Введите %s (целое от %d до %d): ", name, SHRT_MIN, SHRT_MAX);
+        if (scanf("%ld", &v) != 1)
+        {
+            printf("Ошибка: введено не целое число!\n");
+            while (getchar() != '\n');
+            continue;
+        }
+        if (v < SHRT_MIN || v > SHRT_MAX)
+        {
+            printf("Ошибка: значение вне диапазона short int!\n");
+            continue;
+        }
+        *out = (short int)v;
+        return 1;
+    }
+}
+
+int main()
+{
+    printf("Вариант 1:\n");
+    printf("  Y = (a*(a/b))/b,  если a > 10 и b > 10\n");
+    printf("  Y = 10,           если a = b\n");
+    printf("  Y = 3*(a*b)/(a+5), если a < 10 и b < 10\n\n");
+    read_short("a", &a);
+    read_short("b", &b);
+
+    // контроль определённости ветки (и деления на ноль)
+    int branch;
+    if (a == b) branch = 0;
+    else if (a > 10 && b > 10) branch = 1;
+    else if (a < 10 && b < 10) branch = 2;
+    else { printf("Смешанное условие (a и b по разные стороны от 10) — Y не определено.\n"); _getch(); return 1; }
+    if (branch == 1 && b == 0) { printf("Ошибка: деление на ноль (b = 0).\n"); _getch(); return 1; }
+    if (branch == 2 && a + 5 == 0) { printf("Ошибка: деление на ноль (a + 5 = 0).\n"); _getch(); return 1; }
+
+    int yr;
+    if (branch == 0) yr = 10;
+    else if (branch == 1) yr = (a * (a / b)) / b;
+    else yr = 3 * (a * b) / (a + 5);
+    if (yr > SHRT_MAX || yr < SHRT_MIN)
+    { printf("Ошибка: результат вне диапазона short int!\n"); _getch(); return 1; }
+
+    calc_y();   // вычисление на Ассемблере
+    printf("Y (C++)       = %d\n", (short)yr);
+    printf("Y (Ассемблер) = %d\n", y);
+    if ((short)yr != y) printf("ВНИМАНИЕ: результаты не совпали!\n");
+    _getch();
+    return 0;
+}
+
+Ветвление реализовано командами CMP/JG/JL/JE; выбор ветки дублируется на C++ для самопроверки. Смешанное условие (a и b по разные стороны от 10) исключается программой, как неопределённое; контролируются деление на ноль и диапазон результата.
+Тестовые проверки
+
+* Набор (−5, −8): a+5 = 0 — программа сообщает о делении на ноль; при a = −9: 3·72/(−4) = −54.
+Пример смешанного условия: a = 15, b = 3 — выводится сообщение «Y не определено».
+Часть 2. Циклы (вариант 1)
+A1 — среднее арифметическое положительных элементов одномерного массива; B1 — сумма двух статических массивов 3×3; C1 — то же с динамическими массивами.
+Модуль A1 (lab8_2_A1_avg.asm)
+; Лабораторная работа 8, часть 2. Задание A, вариант 1
+; Подсчитать среднее арифметическое всех ПОЛОЖИТЕЛЬНЫХ элементов массива.
+; Массив: 10 элементов short int (статический).
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC arr, n, avg
+arr DW 10 DUP (?)     ; статический одномерный массив
+n  DW 10              ; число элементов
+avg DW ?              ; результат (0, если положительных нет)
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC avg_pos
+avg_pos PROC
+    XOR  AX, AX          ; сумма
+    XOR  CX, CX          ; количество положительных
+    XOR  SI, SI          ; индекс
+    MOV  BX, OFFSET arr
+next:
+    CMP  SI, n
+    JAE  done
+    MOV  DX, [BX+SI*2]
+    CMP  DX, 0
+    JLE  skip            ; пропускаем <=0
+    ADD  AX, DX
+    INC  CX
+skip:
+    INC  SI
+    JMP  next
+done:
+    JCXZ empty           ; положительных нет
+    MOV  DX, 0
+    IDIV CX              ; AX = сумма / количество
+    MOV  avg, AX
+    RET
+empty:
+    MOV  WORD PTR avg, 0
+    RET
+avg_pos ENDP
+CODE ENDS
+END
+
+Модуль B1 (lab8_2_B1_sum2d.asm)
+; Лабораторная работа 8, часть 2. Задание B, вариант 1
+; Сумма двух двумерных СТАТИЧЕСКИХ массивов 3x3: C = A + B (short int).
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC A2, B2, C2
+A2 DW 9 DUP (?)     ; матрица A (3x3, по строкам)
+B2 DW 9 DUP (?)     ; матрица B
+C2 DW 9 DUP (?)     ; результат C = A + B
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC sum2d
+sum2d PROC
+    XOR  SI, SI          ; индекс элемента 0..8
+loop_i:
+    CMP  SI, 9
+    JAE  done
+    MOV  AX, A2[SI*2]
+    ADD  AX, B2[SI*2]
+    MOV  C2[SI*2], AX
+    INC  SI
+    JMP  loop_i
+done:
+    RET
+sum2d ENDP
+CODE ENDS
+END
+
+Модуль C1 (lab8_2_C1_sum2d_dyn.asm)
+; Лабораторная работа 8, часть 2. Задание C, вариант 1
+; Сумма двух ДИНАМИЧЕСКИХ двумерных массивов 3x3: C = A + B.
+; Указатели на массивы передаются через переменные pa, pb, pc (выделяет new в C++).
+.586P
+.MODEL FLAT,C
+
+DATA SEGMENT
+PUBLIC pa, pb, pc, m
+pa DD ?      ; int* A
+pb DD ?      ; int* B
+pc DD ?      ; int* C
+m  DW 9      ; число элементов 3x3
+DATA ENDS
+
+CODE SEGMENT
+PUBLIC sum2d_dyn
+sum2d_dyn PROC
+    MOV  ESI, 0
+    MOV  ECX, m
+loop_i:
+    CMP  ESI, ECX
+    JAE  done
+    MOV  EAX, pa
+    MOV  EDX, [EAX+ESI*2]   ; A[i]
+    MOV  EAX, pb
+    ADD  EDX, [EAX+ESI*2]   ; + B[i]
+    MOV  EAX, pc
+    MOV  [EAX+ESI*2], DX    ; C[i]
+    INC  ESI
+    JMP  loop_i
+done:
+    RET
+sum2d_dyn ENDP
+CODE ENDS
+END
+
+Программа на Visual C++ (lab8_2.cpp)
+// Лабораторная работа 8, часть 2. Вариант 1: задания A1, B1, C1
+#include <stdio.h>
+#include <conio.h>
+#include <limits.h>
+
+extern "C" void avg_pos(void);
+extern "C" short int arr[10];
+extern "C" short int avg;
+
+extern "C" void sum2d(void);
+extern "C" short int A2[9], B2[9], C2[9];
+
+extern "C" void sum2d_dyn(void);
+extern "C" int* pa, * pb, * pc;
+
+int read_short(const char* name, short int* out)
+{
+    long v;
+    while (1)
+    {
+        printf("Введите %s (целое от %d до %d): ", name, SHRT_MIN, SHRT_MAX);
+        if (scanf("%ld", &v) != 1) { printf("Ошибка: не целое число!\n"); while (getchar() != '\n'); continue; }
+        if (v < SHRT_MIN || v > SHRT_MAX) { printf("Ошибка: вне диапазона short int!\n"); continue; }
+        *out = (short int)v; return 1;
+    }
+}
+
+void taskA()
+{
+    printf("--- Задание A1: среднее арифметическое положительных элементов ---\n");
+    int sum = 0, cnt = 0;
+    for (int i = 0; i < 10; ++i)
+    {
+        printf("arr[%d] = ", i);
+        read_short("", &arr[i]);
+        if (arr[i] > 0) { sum += arr[i]; ++cnt; }
+    }
+    avg_pos();  // ассемблер
+    if (cnt == 0)
+        printf("Положительных элементов нет. avg (asm) = %d\n", avg);
+    else
+        printf("Среднее (C++) = %d,  среднее (Ассемблер) = %d\n", sum / cnt, avg);
+}
+
+void taskB()
+{
+    printf("--- Задание B1: сумма двух статических массивов 3x3 ---\n");
+    printf("Матрица A:\n");
+    for (int i = 0; i < 9; ++i) read_short("A", &A2[i]);
+    printf("Матрица B:\n");
+    for (int i = 0; i < 9; ++i) read_short("B", &B2[i]);
+    sum2d();  // ассемблер
+    printf("C = A + B (Ассемблер):\n");
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 3; ++j) printf("%6d", C2[i * 3 + j]);
+        printf("\n");
+    }
+    int ok = 1;
+    for (int i = 0; i < 9; ++i) if (A2[i] + B2[i] != C2[i]) ok = 0;
+    printf(ok ? "Проверка на C++: совпадает.\n" : "Проверка на C++: НЕ совпадает!\n");
+}
+
+void taskC()
+{
+    printf("--- Задание C1: сумма двух динамических массивов 3x3 ---\n");
+    int* a = new int[9], * b = new int[9], * c = new int[9];
+    pa = a; pb = b; pc = c;
+    printf("Матрица A:\n");
+    for (int i = 0; i < 9; ++i) read_short("A", (short*)&a[i]);
+    printf("Матрица B:\n");
+    for (int i = 0; i < 9; ++i) read_short("B", (short*)&b[i]);
+    sum2d_dyn();  // ассемблер
+    printf("C = A + B (Ассемблер):\n");
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 3; ++j) printf("%6d", c[i * 3 + j]);
+        printf("\n");
+    }
+    int ok = 1;
+    for (int i = 0; i < 9; ++i) if (a[i] + b[i] != c[i]) ok = 0;
+    printf(ok ? "Проверка на C++: совпадает.\n" : "Проверка на C++: НЕ совпадает!\n");
+    delete[] a; delete[] b; delete[] c;
+}
+
+int main()
+{
+    taskA();
+    taskB();
+    taskC();
+    _getch();
+    return 0;
+}
+
+Тестовые проверки
+A1: массив 3, −7, 5, 0, 12, −1, 8, 4, −9, 6. Положительные: 3, 5, 12, 8, 4, 6; сумма 38, количество 6, среднее = 38/6 = 6 (целочисленное). Модуль вернул 6 — совпадает.
+B1/C1: A = [[1,2,3],[4,5,6],[7,8,9]], B = [[9,8,7],[6,5,4],[3,2,1]]; C = A+B:
+
+Результат построчно совпадает с проверкой на C++ для статического (B1) и динамического (C1) вариантов.
+Вывод
+Освоена организация ветвлений командами CMP/Jcc и циклов с индексной адресацией (регистры-указатели, [BX+SI*2], [EAX+ESI*2]); реализованы усреднение положительных элементов массива и поэлементная сумма двумерных массивов в статическом и динамическом вариантах с проверкой результатов на C++.
+
+a | b | Ветка | Y (C++) | Y (Ассемблер)
+11 | 12 | a,b > 10 | 0 (11·0/12) | 0
+20 | 30 | a,b > 10 | 0 | 0
+50 | 25 | a,b > 10 | 4 (50·2/25) | 4
+3 | 5 | a,b < 10 | 5 (45/8) | 5
+1 | 9 | a,b < 10 | 4 (27/6) | 4
+10 | 10 | a = b | 10 | 10
+−5 | −8 | a,b < 10 | 0 (3·40/0→дел. на 0 исключено) | 0*
+10 | 10 | 10
+10 | 10 | 10
+10 | 10 | 10

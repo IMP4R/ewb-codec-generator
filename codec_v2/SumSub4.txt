@@ -1,0 +1,4947 @@
+Project_5_1 
+{ 
+  CircuitHeader 
+  { 
+    InternalCircuitVersion i 511 
+    ZoomFactor i 29 
+    VersionSpecific 
+    { 
+      SerialNo R "\"RBS-1999-RBS\""
+        "" 
+      Version R "Version 5.12" 
+      Ewb_Restrictions 
+      { 
+        Name R "Global Restrictions" 
+        CircPass R "" 
+        Path R "c:\\program files\\ewb512" 
+        RelaxAll i 0 
+        Override i 0 
+        NoPrint i 0 
+        ReadOnly i 0 
+        NoFaults i 0 
+        NoSub i 0 
+        NoValues i 0 
+        NoModel i 0 
+        NoDisp i 0 
+        NoCAnal i 0 
+        NoParts i 0 
+        NoInst i 0 
+        NoFav i 0 
+        PBOpt i 0 
+        ANOpt i 1 
+        NoAnal i:14 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+      }
+    }
+    Library 
+    { 
+      Name R "$" 
+    }
+    PrintSettings 
+    { 
+      Choices i:13 0 0 0 0 0 0 0 0 0 0 0 0 0 
+      WkSpacePageBrk i 0 
+      MacroPageBrk i 0 
+      PrintZoom i 2000 
+    }
+  }
+  Circuit 
+  { 
+    Models 
+    { 
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 99 
+        Params r:19 5 0 0 0 0 0 0 1e+06 0 0 2.5 2.5 4e-09 4e-09 1e-08 1e-08 -10 10 2.5 
+      }
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 4 
+        Params r:15 1e-14 0 0 1 0 0.5 1e+30 1 1.11 3 0 1 0.5 0.001 27 
+      }
+      Model 
+      { 
+        Name R "ideal" 
+        PartNum i 15 
+        Params r:12 1e+06 1e+10 1 20 -20 0 0 0 1e+10 1e+12 0 0 
+      }
+    }
+    Preferences 
+    { 
+      Mode i 16 
+      Info i:10 1 0 100 0 0 1 1 1 10485760 0 
+      ShowNodes i 0 
+      Fonts 
+      { 
+        Label 
+        { 
+          Name R "Arial" 
+          Size i -15 
+          Type i 0 
+          Color i 16711680 
+        }
+        Model 
+        { 
+          Name R "Arial" 
+          Size i -15 
+          Type i 0 
+          Color i 16711680 
+        }
+      }
+      Wiring 
+      { 
+        Manual i 1 
+        Auto i 0 
+        AutoModed i 0 
+        Reroute i 0 
+        Still i 0 
+        AutoDelete i 1 
+      }
+    }
+    Elements 
+    { 
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 1010 
+        Value r:1 49 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "A0" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 1050 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 1000 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 945 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 830 
+        Value r:1 50 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "A1" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 870 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 820 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 765 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 650 
+        Value r:1 51 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "A2" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 690 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 640 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 585 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 470 
+        Value r:1 52 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S3" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "A3" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 510 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V3" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 460 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 405 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 290 
+        Value r:1 53 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S4" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "B0" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 330 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V4" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 280 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 225 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 110 
+        Value r:1 54 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S5" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "B1" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 150 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V5" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 100 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 45 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 -70 
+        Value r:1 55 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S6" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "B2" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 -30 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V6" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 -80 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 -135 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 -250 
+        Value r:1 56 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S7" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "B3" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 -210 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V7" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 -260 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 -315 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 38 
+        Position i:3 0 700 -430 
+        Value r:1 57 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S8" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "SUB" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 2 
+        Position i:3 3 580 -390 
+        Value r:3 5 0 0 
+        ModelUnits i:3 2 0 0 
+        Common 
+        { 
+          RefID A "V8" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 1 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 530 -440 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 8 
+        Position i:3 0 760 -495 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1050 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "Bx0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1050 530 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "Bx1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1050 50 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "Bx2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1050 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "Bx3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1350 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "P0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 1350 804 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "G0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1350 599 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "P1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 1350 393 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "G1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1350 187 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "P2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 1350 -19 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "G2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1350 -224 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "P3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 1350 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "G3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 1650 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 1650 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "H0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Or2" 
+        Position i:3 0 1950 290 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "C1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 2250 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 2250 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "H1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Or2" 
+        Position i:3 0 2550 290 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "C2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 2850 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 2850 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "H2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Or2" 
+        Position i:3 0 3150 290 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "C3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 3450 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:And2" 
+        Position i:3 0 3450 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "H3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Or2" 
+        Position i:3 0 3750 290 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C4" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "C4" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 4050 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CF" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "CF" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:Xor2" 
+        Position i:3 0 4050 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OF" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "OF" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 1010 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT0" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S3" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 722 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT1" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S2" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 434 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT2" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S1" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 146 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT3" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "S0" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 -142 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT4" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "CF" 
+      }
+      ExtComp 
+      { 
+        Name R "DIGITAL:ProbeR" 
+        Position i:3 2 4350 -430 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OUT5" 
+        }
+        Data R "" 
+        ModelName R "ideal" 
+        Status i 0 
+        Label R "OF" 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 835 1050 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 835 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 835 834 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A0_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 861 870 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 861 629 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 861 423 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A1_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 887 690 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 887 217 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 887 11 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A2_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 913 510 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 913 -194 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 913 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "A3_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 939 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 939 330 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 965 560 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 965 150 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 991 80 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 991 -30 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1017 -210 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1017 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "B3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1043 1020 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1043 540 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1043 60 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1043 -390 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_J3" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1043 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_J4" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1073 1000 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_T0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1098 988 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_T1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1123 976 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_T2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1073 -440 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_T0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1098 -452 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "SUB_T1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1197 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1197 1020 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1197 814 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx0_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1209 609 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1209 550 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1209 403 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx1_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1221 197 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1221 70 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1221 -9 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx2_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1185 -214 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1185 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1185 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "Bx3_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P0_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1509 824 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1509 320 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 619 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P1_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1485 413 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1485 320 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 207 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1497 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P2_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1509 320 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1509 1 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 -204 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1521 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "P3_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1485 320 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1485 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "G3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1797 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1797 166 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1809 300 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H0_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 1809 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H0_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2121 1020 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2121 310 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2121 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C1_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2385 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2385 454 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2397 300 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H1_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2397 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H1_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2709 1020 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2709 310 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2709 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C2_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3021 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3021 742 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2985 300 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H2_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 2985 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H2_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3297 1020 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3297 310 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3297 -400 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C3_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3297 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C3_J3" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3609 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "S3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3621 300 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H3_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3621 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "H3_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3885 1040 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C4_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3885 310 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C4_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 3885 -420 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "C4_J2" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 4197 1030 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CF_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 4197 -122 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "CF_J1" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+      Comp 
+      { 
+        PartNum i 9 
+        Position i:3 0 4209 -410 
+        Value r:1 0 
+        ModelUnits i:1 0 
+        Common 
+        { 
+          RefID A "OF_J0" 
+        }
+        ModelName R "" 
+        Status i 0 
+        Label R "" 
+        useGlobalSchematicOpts i 0 
+        showLabel i 1 
+        showValue i 0 
+        showRefID i 0 
+        showModel i 0 
+      }
+    }
+    Wires 
+    { 
+      wire 
+      { 
+        pos i:4 1 1 2 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 1 0 0 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 0 1 3 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 5 1 6 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 5 0 4 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 4 1 7 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 9 1 10 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 9 0 8 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 8 1 11 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 13 1 14 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 13 0 12 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 12 1 15 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 17 1 18 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 17 0 16 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 16 1 19 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 21 1 22 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 21 0 20 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC5" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 20 1 23 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 25 1 26 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 25 0 24 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC6" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 24 1 27 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 29 1 30 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 29 0 28 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC7" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 28 1 31 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 33 1 34 0 
+        segs i:4 4 40 8 29 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 33 0 32 2 
+        segs i:4 1 35 1 55 
+        colour i 0 
+        wire_id i 0 
+        node_p A "VCC8" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 32 1 35 0 
+        segs i:4 1 40 8 64 
+        colour i 0 
+        wire_id i 0 
+        node_p A "0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 0 0 68 0 
+        segs i:2 1 125 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 68 3 69 1 
+        segs i:2 1 0 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 69 3 70 1 
+        segs i:2 8 196 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 69 2 40 0 
+        segs i:2 1 515 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 70 2 41 0 
+        segs i:2 1 515 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 4 0 71 0 
+        segs i:2 1 151 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 71 3 72 1 
+        segs i:2 8 231 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 72 3 73 1 
+        segs i:2 8 196 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 72 2 42 0 
+        segs i:2 1 489 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 73 2 43 0 
+        segs i:2 1 489 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 8 0 74 0 
+        segs i:2 1 177 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 74 3 75 1 
+        segs i:2 8 463 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 75 3 76 1 
+        segs i:2 8 196 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 75 2 44 0 
+        segs i:2 1 463 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 76 2 45 0 
+        segs i:2 1 463 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 12 0 77 0 
+        segs i:2 1 203 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 77 3 78 1 
+        segs i:2 8 694 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 78 3 79 1 
+        segs i:2 8 196 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 78 2 46 0 
+        segs i:2 1 437 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 79 2 47 0 
+        segs i:2 1 437 
+        colour i 0 
+        wire_id i 0 
+        node_p A "A3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 16 0 81 0 
+        segs i:2 1 229 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 80 3 81 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 80 2 36 0 
+        segs i:2 1 111 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 20 0 83 0 
+        segs i:2 1 255 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 82 3 83 1 
+        segs i:2 8 400 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 82 2 37 0 
+        segs i:2 1 85 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 24 0 85 0 
+        segs i:2 1 281 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 84 3 85 1 
+        segs i:2 8 100 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 84 2 38 0 
+        segs i:2 1 59 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 28 0 86 0 
+        segs i:2 1 307 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 86 3 87 1 
+        segs i:2 8 180 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 87 2 39 0 
+        segs i:2 1 33 
+        colour i 0 
+        wire_id i 0 
+        node_p A "B3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 32 0 91 0 
+        segs i:2 1 333 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 88 3 89 1 
+        segs i:2 8 470 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 89 3 90 1 
+        segs i:2 8 470 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 90 3 91 1 
+        segs i:2 8 440 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 91 3 92 1 
+        segs i:2 8 20 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 88 2 93 0 
+        segs i:6 1 15 8 20 1 5 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 93 2 36 1 
+        segs i:6 4 53 2 20 1 30 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 93 3 94 0 
+        segs i:6 1 15 8 7 1 5 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 94 2 48 1 
+        segs i:6 1 522 2 32 1 30 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 94 3 95 0 
+        segs i:6 1 15 8 7 1 5 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 95 2 60 1 
+        segs i:6 1 2897 2 44 1 30 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 89 2 37 1 
+        segs i:2 1 7 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 90 2 38 1 
+        segs i:2 1 7 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 92 2 96 0 
+        segs i:6 1 15 8 20 1 5 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 96 2 39 1 
+        segs i:6 4 53 2 20 1 30 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 96 3 97 0 
+        segs i:6 1 15 8 7 1 5 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 97 2 49 1 
+        segs i:6 1 522 2 32 1 30 
+        colour i 0 
+        wire_id i 0 
+        node_p A "SUB" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 36 2 98 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 98 3 99 1 
+        segs i:2 1 0 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 99 3 100 1 
+        segs i:2 8 196 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 99 2 40 1 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 100 2 41 1 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 37 2 102 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 101 3 102 1 
+        segs i:2 8 49 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 102 3 103 1 
+        segs i:2 8 137 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 101 2 42 1 
+        segs i:2 1 141 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 103 2 43 1 
+        segs i:2 1 141 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 38 2 105 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 104 3 105 1 
+        segs i:2 8 117 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 105 3 106 1 
+        segs i:2 8 69 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 104 2 44 1 
+        segs i:2 1 129 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 106 2 45 1 
+        segs i:2 1 129 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 39 2 108 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 107 3 108 1 
+        segs i:2 8 186 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 108 3 109 1 
+        segs i:2 1 0 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 107 2 46 1 
+        segs i:2 1 165 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 109 2 47 1 
+        segs i:2 1 165 
+        colour i 0 
+        wire_id i 0 
+        node_p A "Bx3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 40 2 111 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 110 3 111 1 
+        segs i:2 1 0 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 111 3 112 1 
+        segs i:2 8 1420 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 110 2 48 0 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 112 2 49 0 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 41 2 113 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 113 3 114 1 
+        segs i:2 8 494 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 114 2 50 0 
+        segs i:2 1 441 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 42 2 116 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 115 3 116 1 
+        segs i:2 8 411 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 116 3 117 1 
+        segs i:2 8 1009 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 115 2 51 0 
+        segs i:2 1 729 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 117 2 52 0 
+        segs i:2 1 729 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 43 2 118 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 118 3 119 1 
+        segs i:2 8 83 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 119 2 53 0 
+        segs i:2 1 1065 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 44 2 121 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 120 3 121 1 
+        segs i:2 8 823 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 121 3 122 1 
+        segs i:2 8 597 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 120 2 54 0 
+        segs i:2 1 1353 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 122 2 55 0 
+        segs i:2 1 1353 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 45 2 124 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 123 3 124 1 
+        segs i:2 8 309 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 123 2 56 0 
+        segs i:2 1 1641 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 46 2 126 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 125 3 126 1 
+        segs i:2 8 1234 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 126 3 127 1 
+        segs i:2 8 186 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 125 2 57 0 
+        segs i:2 1 1929 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 127 2 58 0 
+        segs i:2 1 1929 
+        colour i 0 
+        wire_id i 0 
+        node_p A "P3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 47 2 129 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 128 3 129 1 
+        segs i:2 8 720 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 128 2 59 0 
+        segs i:2 1 2265 
+        colour i 0 
+        wire_id i 0 
+        node_p A "G3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 48 2 130 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 130 3 131 1 
+        segs i:2 8 854 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 131 2 65 0 
+        segs i:2 1 2543 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 49 2 133 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 132 3 133 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 132 2 50 1 
+        segs i:2 1 141 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H0" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 50 2 135 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 134 3 135 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 135 3 136 1 
+        segs i:2 8 720 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 134 2 51 1 
+        segs i:2 1 129 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 136 2 52 1 
+        segs i:2 1 129 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 51 2 137 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 137 3 138 1 
+        segs i:2 8 566 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 138 2 64 0 
+        segs i:2 1 1955 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 52 2 140 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 139 3 140 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 139 2 53 1 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H1" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 53 2 142 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 141 3 142 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 142 3 143 1 
+        segs i:2 8 720 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 141 2 54 1 
+        segs i:2 1 141 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 143 2 55 1 
+        segs i:2 1 141 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 54 2 144 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 144 3 145 1 
+        segs i:2 8 278 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 145 2 63 0 
+        segs i:2 1 1319 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 55 2 147 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 146 3 147 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 146 2 56 1 
+        segs i:2 1 165 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H2" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 56 2 149 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 148 3 149 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 149 3 150 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 150 3 151 1 
+        segs i:2 8 10 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 148 2 57 1 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 151 2 58 1 
+        segs i:2 1 153 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 150 2 61 0 
+        segs i:2 1 753 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 57 2 152 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 152 2 62 0 
+        segs i:2 1 731 
+        colour i 0 
+        wire_id i 0 
+        node_p A "S3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 58 2 154 0 
+        segs i:2 1 101 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 153 3 154 1 
+        segs i:2 8 700 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 153 2 59 1 
+        segs i:2 1 129 
+        colour i 0 
+        wire_id i 0 
+        node_p A "H3" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 59 2 156 0 
+        segs i:2 1 65 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 155 3 156 1 
+        segs i:2 8 720 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 156 3 157 1 
+        segs i:2 8 720 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 155 2 60 0 
+        segs i:2 1 165 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 157 2 61 1 
+        segs i:2 1 165 
+        colour i 0 
+        wire_id i 0 
+        node_p A "C4" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 60 2 158 0 
+        segs i:2 1 77 
+        colour i 0 
+        wire_id i 0 
+        node_p A "CF" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 158 3 159 1 
+        segs i:2 8 1142 
+        colour i 0 
+        wire_id i 0 
+        node_p A "CF" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 159 2 66 0 
+        segs i:2 1 143 
+        colour i 0 
+        wire_id i 0 
+        node_p A "CF" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 61 2 160 0 
+        segs i:2 1 89 
+        colour i 0 
+        wire_id i 0 
+        node_p A "OF" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+      wire 
+      { 
+        pos i:4 160 2 67 0 
+        segs i:2 1 131 
+        colour i 0 
+        wire_id i 0 
+        node_p A "OF" 
+        x_factor r 1 
+        y_factor r 1 
+      }
+    }
+    InstSettings 
+    { 
+      MultiMeter 
+      { 
+        Mode i 2 
+        InpType i 2 
+        Value r:4 1 1 0.01 1 
+        Scale i:4 1 3 0 2 
+      }
+      FuncGen 
+      { 
+        Mode i 1 
+        Wave r:4 1 50 10 0 
+        Symmetry i -1 
+        Units i:2 0 2 
+      }
+      Oscilloscope 
+      { 
+        Pos i:6 0 29 1 4 0 1 
+        Value i:6 17 0 3 17 0 3 
+        Size i 0 
+      }
+      Bode 
+      { 
+        Data i:15 -1 -1 0 30 0 10 0 30 1 1 1 10 0 10 4 
+      }
+      WordGen 
+      { 
+        Pattern 
+        { 
+          Initial i 0 
+          Final i 999 
+        }
+        Data i:5 3 1 1 10 1 
+      }
+      TruthTable 
+      { 
+        BoolExpr A "" 
+        Mask i 0 
+      }
+      LogicAnalyzer 
+      { 
+        Values i:5 1 21 0 2 2 
+        ClockMode i 0 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        Pattern A "xxxxxxxxxxxxxxxx" 
+        ClksPerDiv i 0 
+        LogicFrequency r:16 10 1 4.45619e-313 4.24399e-314 9.96914e-308 5.30245e-307 2.97081e-312 5.32741e-307 1.09326e-294 1.09316e-294 1.09324e-294 9.96944e-308 2.10585e-297 1.08985e-294 9.96975e-308 5.33269e-307 
+      }
+    }
+    WindowInfo 
+    { 
+      Position i:14 0 3 28 1393 732 -413 -501 2200 1313 0 0 0 0 0 
+    }
+    InstPos 
+    { 
+      Oscilloscope i:3 0 22 1 
+      FuncGen i:3 6 22 1 
+      Oscilloscope i:3 2 25 1 
+      MultiMeter i:3 11 24 1 
+      WordGen i:3 9 22 1 
+      LogicAnalyzer i:3 9 22 1 
+      TruthTable i:3 3 22 1 
+      Bode i:3 8 23 1 
+    }
+    PBPos 
+    { 
+      PBNum i:6 0 2 0 68 62 129 
+      PBNum i:6 1 0 55 68 453 172 
+      PBNum i:6 2 2 86 68 453 172 
+      PBNum i:6 3 2 117 68 383 137 
+      PBNum i:6 4 2 148 68 422 172 
+      PBNum i:6 5 2 187 68 383 137 
+      PBNum i:6 6 2 218 68 383 137 
+      PBNum i:6 7 2 249 68 445 137 
+      PBNum i:6 8 2 288 68 608 172 
+      PBNum i:6 9 2 319 68 546 172 
+      PBNum i:6 10 0 358 68 655 137 
+      PBNum i:6 11 2 389 68 795 137 
+      PBNum i:6 12 2 420 68 849 137 
+      PBNum i:6 13 2 459 68 686 137 
+      PBNum i:6 14 2 -4 780 31 841 
+      PBNum i:6 15 2 -4 780 31 841 
+      PBNum i:6 16 2 -4 780 31 841 
+      PBNum i:6 17 2 -4 780 31 841 
+    }
+    GrapherInfo 
+    { 
+      Shown i 0 
+    }
+    SimulationOptions 
+    { 
+      tolerance r 0.1 
+      time_step r 3.5 
+      abstol r 1e-12 
+      chgtol r 1e-14 
+      convabsstep r 0.1 
+      convstep r 0.25 
+      defad r 0 
+      defas r 0 
+      defl r 0.0001 
+      defw r 0.0001 
+      gmin r 1e-12 
+      pivrel r 0.001 
+      pivtol r 1e-13 
+      ramptime r 0 
+      reltol r 0.001 
+      rshunt r 1e+12 
+      temp r 27 
+      tnom r 27 
+      trtol r 7 
+      vntol r 1e-06 
+      tstep r 1e-05 
+      tmax r 1e-05 
+      thresh_volt r 3.5 
+      globTemp r 3.5 
+      bode_num_points i 100 
+      auto_tmax i 1 
+      tmax_enab i 0 
+      tpoints i 100 
+      uic i 2 
+      display_opt_enab i 1 
+      pre_trigger i 100 
+      post_trigger i 1000 
+      noopalter i 1 
+      convlimit i 1 
+      out_of_memory i 0 
+      steady_state i 1 
+      precision i 1 
+      force_AC i 0 
+      zero_init_cond i 0 
+      time_step_index i 1 
+      iterations i 100 
+      anal_auto i 0 
+      pause_at_end_of_screen i 0 
+      num_points i 100 
+      same_steps i 1 
+      convabstep_enab i 0 
+      convstep_enab i 0 
+      gminsteps i 10 
+      itl1 i 100 
+      itl2 i 50 
+      itl4 i 25 
+      itl6 i 10 
+      maxevtiter_enab i 0 
+      maxevtiter i 2000 
+      maxopalter_enab i 0 
+      maxopalter i 1000 
+      maxord i 2 
+      rshunt_enab i 1 
+      srcsteps i 10 
+      acct i 1 
+      bypass i 1 
+      noOpIter i 0 
+      tryToCompact i 0 
+      integrateMethod i 1 
+      eng_notation i 1 
+    }
+  }
+}

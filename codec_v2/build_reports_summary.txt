@@ -1,0 +1,5 @@
+Submission artifacts updated:
+- Lab3 Inverter/NAND/NOR + F1 five logic basis circuits
+- Lab4 native combinational folder Encoder4to2 Decoder2to4 Mux2to1 Demux1to2 HA_layout FullAdder SumSub4
+- Lab5 teacher-provided Memory/Register preserved as authoritative; custom latch/register experiments in codec_v2, not silently substituted
+- Lab6–8 repaired assembly/C++ and valid reports regenerated; actual x86 machine-code reports are emulation evidence, not Visual Studio link proof

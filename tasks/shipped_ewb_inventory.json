@@ -1,0 +1,240 @@
+[
+  {
+    "file": "Лаб_3/ewb/F1_SDNF.ewb",
+    "bytes": 20170,
+    "components": 59,
+    "wires": 67,
+    "digital": [
+      "And3",
+      "Not",
+      "Or2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_3/ewb/F1_SKNF.ewb",
+    "bytes": 19621,
+    "components": 57,
+    "wires": 65,
+    "digital": [
+      "And2",
+      "Not",
+      "Or3",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_3/ewb/F1_min_ANDORNOT.ewb",
+    "bytes": 13932,
+    "components": 34,
+    "wires": 34,
+    "digital": [
+      "And2",
+      "Not",
+      "Or2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_3/ewb/F1_min_NAND.ewb",
+    "bytes": 13941,
+    "components": 34,
+    "wires": 34,
+    "digital": [
+      "Nand2",
+      "Not",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_3/ewb/F1_min_NOR.ewb",
+    "bytes": 13963,
+    "components": 34,
+    "wires": 34,
+    "digital": [
+      "Nor2",
+      "Not",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_3/ewb/Inverter.ewb",
+    "bytes": 7559,
+    "components": 10,
+    "wires": 10,
+    "digital": []
+  },
+  {
+    "file": "Лаб_3/ewb/Inverter.reference_candidate.ewb",
+    "bytes": 7559,
+    "components": 10,
+    "wires": 10,
+    "digital": []
+  },
+  {
+    "file": "Лаб_3/ewb/NAND.ewb",
+    "bytes": 8766,
+    "components": 13,
+    "wires": 13,
+    "digital": []
+  },
+  {
+    "file": "Лаб_3/ewb/NOR.ewb",
+    "bytes": 9293,
+    "components": 15,
+    "wires": 15,
+    "digital": []
+  },
+  {
+    "file": "Лаб_3/ewb/lab3_1_inverter.ewb",
+    "bytes": 11165,
+    "components": 11,
+    "wires": 6,
+    "digital": []
+  },
+  {
+    "file": "Лаб_4/ewb/native/Decoder2to4.ewb",
+    "bytes": 14545,
+    "components": 37,
+    "wires": 39,
+    "digital": [
+      "And2",
+      "Not",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/Demux1to2.ewb",
+    "bytes": 11273,
+    "components": 23,
+    "wires": 23,
+    "digital": [
+      "And2",
+      "Not",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/Encoder4to2.ewb",
+    "bytes": 12691,
+    "components": 29,
+    "wires": 27,
+    "digital": [
+      "Or2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/FullAdder.ewb",
+    "bytes": 14639,
+    "components": 37,
+    "wires": 39,
+    "digital": [
+      "And2",
+      "Or2",
+      "ProbeR",
+      "Xor2"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/HA_layout.ewb",
+    "bytes": 10671,
+    "components": 20,
+    "wires": 20,
+    "digital": [
+      "And2",
+      "ProbeR",
+      "Xor2"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/Mux2to1.ewb",
+    "bytes": 13238,
+    "components": 31,
+    "wires": 31,
+    "digital": [
+      "And2",
+      "Not",
+      "Or2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_4/ewb/native/SumSub4.ewb",
+    "bytes": 44484,
+    "components": 157,
+    "wires": 174,
+    "digital": [
+      "And2",
+      "Or2",
+      "ProbeR",
+      "Xor2"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/Memory.ewb",
+    "bytes": 45703,
+    "components": 191,
+    "wires": 191,
+    "digital": [
+      "And2",
+      "And3",
+      "D",
+      "Not",
+      "Or4",
+      "ProbeR",
+      "Tri"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/Register.ewb",
+    "bytes": 18866,
+    "components": 50,
+    "wires": 56,
+    "digital": [
+      "DN",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/native/D_sync.native.ewb",
+    "bytes": 10479,
+    "components": 19,
+    "wires": 21,
+    "digital": [
+      "Nand2",
+      "Not",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/native/RS.native.ewb",
+    "bytes": 9679,
+    "components": 16,
+    "wires": 16,
+    "digital": [
+      "Nand2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/native/RS_sync.native.ewb",
+    "bytes": 11683,
+    "components": 23,
+    "wires": 24,
+    "digital": [
+      "Nand2",
+      "ProbeR"
+    ]
+  },
+  {
+    "file": "Лаб_5/ewb/native/Register.native.ewb",
+    "bytes": 18661,
+    "components": 51,
+    "wires": 56,
+    "digital": [
+      "DN",
+      "ProbeR"
+    ]
+  }
+]

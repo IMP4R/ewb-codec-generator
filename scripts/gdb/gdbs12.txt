@@ -1,0 +1,4 @@
+set pagination off
+set architecture i386
+attach 2046719
+info sharedlibrary

@@ -1,0 +1,10 @@
+set pagination off
+set architecture i386
+attach 2093852
+break *0x4a9def
+commands
+silent
+printf "P %d\n", *(unsigned char*)($ebp+0xc)
+continue
+end
+continue

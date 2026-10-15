@@ -1,0 +1,26 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  set $c1 = *(unsigned int*)$ecx
+  if $c1 == 0x63656c45
+    printf "FILEWRITE len=%d\n", $edx
+    set $sp = $esp
+    set $i = 0
+    while $i < 2048
+      set $v = *(unsigned int*)($sp + $i*4)
+      if $v >= 0x401000 && $v < 0x55a000
+        printf "STACK[%d]=0x%08x\n", $i, $v
+      end
+      set $i = $i + 1
+    end
+    detach
+    quit
+  end
+end
+continue
+end
+continue

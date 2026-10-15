@@ -1,0 +1,13 @@
+set pagination off
+set architecture i386
+attach 2046719
+catch syscall write
+commands
+silent
+if $ebx == 3
+  printf "=== WRITE3 len=%d\n", $edx
+  bt 12
+end
+continue
+end
+continue

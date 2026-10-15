@@ -1,0 +1,10 @@
+set pagination off
+set architecture i386
+attach 2062406
+break *0x4a9def
+commands
+silent
+printf "P %d %c\n", *(int*)($ebp+0xc), *(char*)($ebp+0xc) == 0 ? 46 : *(char*)($ebp+0xc)
+continue
+end
+continue

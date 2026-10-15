@@ -1,0 +1,12 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 100
+  printf "W fd=%d len=%d\n", $ebx, $edx
+end
+continue
+end
+continue

@@ -1,0 +1,33 @@
+# Latest status after ongoing expanded labs completion
+
+All tasks remain active; userapprovedInverter, don'trefineitagain. Goalrev4active40(rearmedgetgoal/resume). Noallcompleteclaim.
+
+### Delivered & verified current
+Inverter,NAND,NORrealnativefilesinLab3/ewb. Approvedinverterunchanged. NAND/NORopennoerrors/referencecorrect. OneactualNAND00sim4.995Vonly. Needremaining10states/table.
+GeneratednativeDAGcircuits11+SumSub4 with641?allcombinationsindependentDSUpinoraclePASS. CorrectnativeDIGITALtypesnotoldresistorimports. Output/topologyJSON+truthJSON. Stillaestheticroutingwork &notallEWBfinalversionsscreensloaded.
+RS,syncRS,Dsyncnativegenerated;Dsyncactualopensnoerror. NativeRegister4DNgeneratedactualreg_new.pngopensnoerror;DNpincontracttested6pins. CurrentcustommemorybuildemptycanvasnotvalidDO NOTdeliver.
+
+### Instructor-provided memory/register authoritative
+Foundsource `/Users/user0/АВУ/лабы/lab05/Memory.ewb`,Register.ewb. Assignmentrequiresopenthem,notreplacewithdifferentdesign. Decodedbothwcodec. ActualMemoryteacher_mem.ewbopensvisible(noerror) screenshotteacher_mem.png; simulationactivatedtimer3.01 screenshotsmem_active.png. Currentliveeditor teacher_mem.ewbRUNNING. Noactualwritereadscenariosyet; doinputstepsCS/WR/OEandaddresskeys accordingdecoded. LastPID2383234window16777217.
+Memoryinputkeys source: data1/2/3;addressA1keyA,A0keyS;CSkeyC,WRkeyW,OEkeyO. labelsO1O2O3. Providedcircuituses12nativeDflipflopsdecodemuxTri. Betterpreservefunctionalteacherfilethanreinvent. Nativefontimprovedcopies `Memory.teacher.ewb`+Register.teacher.ewb createdcodec_v2 viasamecodecsourcemodel, notyetEWBchecked. Needvisualcleanifbeautyrequired, butdon'tloseactualportsCSWR OE.
+
+### Programs/Reports actual update
+- Alloriginalsbacksprogramming-backups.
+- 6MASMlab7/8bodiesx86NASM+Unicorn tests71162PASS ABIpreserved machine_execution_report.json. 8Lab6routines2600PASS lab6_execution_report.json. ActualMSVSlinknotperformed, honestemulationonly.
+- Lab6invalidmemoryXCHGfixedandEBXABIrepairs; newC++demoEXERCISE1..8compiledsyntax8variants. Newreverse_eax_core.asmexactEAXentrynotmachine-testedyet;reportsstatesoriginal8 testedbutnewcorenotcoverageclaim.
+- Lab7calc exactexpr32bitintermediates,div0/rangeresultchecks;bitsCPPfull-linebinaryEOFsafeandmaskref.
+- Lab8previouswrongformulafixedexactPDF: a>b(3a+5)/(b-1);a=b10;a<b(a+b)/(a-b). Arraytypes/stridescorrectshort,32bitmeansum/staticdynamiccheckedpartialwriteprevention.
+- Newcommon/input_short.hstrictwholeline/range/EOF. FourCPPfrontendsclangsyntaxPASS.
+- ProgrammingDOCXreportsREBUILT via programming/build_reports.py andvalidatedpython-docxopen: Лаб6/Отчёт_Лаб6.docx,Лаб7report,Лаб8report(correctformulas/currentfullsource+realtests+explicitNONnativeVSlinklimitation). Sourceoldreportsbackupprogramming/original_reports.
+- OldLab4DOCX wasMALFORMED XML tag mismatch(unreadablepython-docx),rawarchivedtasks/reports/Лаб4.xml.txt. Mustreplacevalidupdatedrealnative report;Lab5similarlyinspect. Lab3oldnotupdatedmeasurements.
+
+### Editor quirks/checks
+simactivationAltAthenmenuitem14030 (worksactualtimer/probelights); keyCtrlGoftennothingmenuFocus. OpenCtrlOcustomtextHomeShiftEnd clears(notCtrlA),field570360Open850347twicecheckactualtitle. SavechangesNo700483needafterinputGUIedits. Longfilenamestypedmissinglastcharpossible=>shortuniquenames. Neverassumeall4casekeyboardcaptureschanged; previousha_caseallunchangedsoINVALIDfulltruthproof. Status0high,Status1low; defaultbothStatus0should11buthalfsomeunwiredpowersource? singleoutputscheckedonly.
+
+### Next exact useful tasks
+1. TeacherMemorytestactualspecifiedwrite10=010/write00=111/read/disable/WEenabledoutdisabled withrealprobelightsandlogs. TeacherRegistertest1101front/asynSetClear.
+2. FinishallanalogvoltagetableactualEWBstates andfunctionalcombinationtestwithfixedinitialswitchstatuses (notfailedkeyboardactions),rebuildcleanlayout.
+3. PublishnewnativeLab3functions/Lab4filesonlyafteractualopenproofscreens. Improvebuslaneaesthetic,sharedpowerbusorclean1sourceblocks,minlabelsclutter.
+4. UpdateLab3–5DOCXusingrealEWBscreenshotsandhonesttableprovenance; nofabricatedmeasurements.
+5. NativeWindowsMASMtools/buildcouldstillneeded, don'tpretenddone. Exactreverseeaxcoretest andcommoninputtests.
+Allbackgroundjobscollectednonepending. Allsubagentsfailedbeforeworkdoownwork. Goalactivecontinue, no userquestionneeded.

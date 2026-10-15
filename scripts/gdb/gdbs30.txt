@@ -1,0 +1,11 @@
+set pagination off
+set architecture i386
+attach 2062406
+break *0x4a9ef3
+commands
+silent
+printf "SRCOUT len=%d\n", *(int*)($edi + 0x38)
+x/128cb $esi
+continue
+end
+continue

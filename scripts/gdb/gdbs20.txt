@@ -1,0 +1,24 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  printf "FIRST BIG WRITE buf=%p len=%d\n", $ecx, $edx
+  set $buf = $ecx
+  delete
+  watch -l *(unsigned int*)($buf + 512)
+  commands
+    silent
+    printf "WATCH HIT: write to buf+512\n"
+    info registers eip
+    x/6i $eip-16
+    detach
+    quit
+  end
+  continue
+end
+continue
+end
+continue

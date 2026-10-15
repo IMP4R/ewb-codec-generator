@@ -1,0 +1,11 @@
+set pagination off
+set architecture i386
+attach 2062406
+break *0x4aa051
+commands
+silent
+printf "SINK buf=%p len=%d ctx=%p\n", *(int*)($ebp+8), *(int*)(*(int*)($ebp+0xc)), *(int*)($ebp+0x10)
+x/48xb *(int*)($ebp+8)
+continue
+end
+continue

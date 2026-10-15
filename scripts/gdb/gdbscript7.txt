@@ -1,0 +1,10 @@
+set pagination off
+set architecture i386
+attach 2046719
+catch syscall write writev pwrite64
+commands
+silent
+printf "HIT nr=%s ebx=%d ecx=%p edx=%d\n", $syscall, $ebx, $ecx, $edx
+continue
+end
+continue

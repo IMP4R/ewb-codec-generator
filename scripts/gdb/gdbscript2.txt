@@ -1,0 +1,12 @@
+set pagination off
+set architecture i386
+attach 2046719
+break *0x486f9e
+commands
+silent
+printf "\n=== EwbFileSave hit! esp=%p\n", $esp
+x/8xw $esp
+bt 6
+continue
+end
+continue

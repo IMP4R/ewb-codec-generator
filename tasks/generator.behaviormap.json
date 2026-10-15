@@ -1,0 +1,12 @@
+{
+  "format": "goldenland-behavior-map/1",
+  "generated_at": "2026-10-03T23:40:56.187Z",
+  "project_root": "/Users/user0/ewb_rev/codec_v2",
+  "stack": "generic",
+  "totals": {
+    "nodes": 0,
+    "files_scanned": 14,
+    "duplicate_labels": 0
+  },
+  "nodes": []
+}

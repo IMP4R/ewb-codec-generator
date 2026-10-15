@@ -1,0 +1,15 @@
+{
+  "method": "Actual Electronic Workbench 5.12 simulation, voltmeter visually read from preserved full-screen captures",
+  "cases": [
+    {"gate":"Inverter","inputs_V":[0.1],"output_V":4.995,"logic":1,"screenshot":"in0_run.png"},
+    {"gate":"Inverter","inputs_V":[2.0],"output_V":0.01793,"logic":0,"screenshot":"in1_run.png"},
+    {"gate":"NAND","inputs_V":[0.1,0.1],"output_V":4.995,"logic":1,"screenshot":"na00_run.png"},
+    {"gate":"NAND","inputs_V":[0.1,2.0],"output_V":4.995,"logic":1,"screenshot":"na01_run.png"},
+    {"gate":"NAND","inputs_V":[2.0,0.1],"output_V":4.995,"logic":1,"screenshot":"na10_run.png"},
+    {"gate":"NAND","inputs_V":[2.0,2.0],"output_V":0.04168,"logic":0,"screenshot":"na11_run.png"},
+    {"gate":"NOR","inputs_V":[0.1,0.1],"output_V":4.995,"logic":1,"screenshot":"no00_run.png"},
+    {"gate":"NOR","inputs_V":[0.1,2.0],"output_V":0.01793,"logic":0,"screenshot":"no01_run.png"},
+    {"gate":"NOR","inputs_V":[2.0,0.1],"output_V":0.01793,"logic":0,"screenshot":"no10_run.png"},
+    {"gate":"NOR","inputs_V":[2.0,2.0],"output_V":0.01793,"logic":0,"screenshot":"no11_run.png"}
+  ]
+}

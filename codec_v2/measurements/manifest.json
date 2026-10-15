@@ -1,0 +1,100 @@
+[
+  {
+    "alias": "in0",
+    "gate": "Inverter",
+    "inputs": [
+      0.1
+    ],
+    "expected_logic": 1,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/in0.ewb"
+  },
+  {
+    "alias": "in1",
+    "gate": "Inverter",
+    "inputs": [
+      2
+    ],
+    "expected_logic": 0,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/in1.ewb"
+  },
+  {
+    "alias": "na00",
+    "gate": "NAND",
+    "inputs": [
+      0.1,
+      0.1
+    ],
+    "expected_logic": 1,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/na00.ewb"
+  },
+  {
+    "alias": "na01",
+    "gate": "NAND",
+    "inputs": [
+      0.1,
+      2
+    ],
+    "expected_logic": 1,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/na01.ewb"
+  },
+  {
+    "alias": "na10",
+    "gate": "NAND",
+    "inputs": [
+      2,
+      0.1
+    ],
+    "expected_logic": 1,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/na10.ewb"
+  },
+  {
+    "alias": "na11",
+    "gate": "NAND",
+    "inputs": [
+      2,
+      2
+    ],
+    "expected_logic": 0,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/na11.ewb"
+  },
+  {
+    "alias": "no00",
+    "gate": "NOR",
+    "inputs": [
+      0.1,
+      0.1
+    ],
+    "expected_logic": 1,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/no00.ewb"
+  },
+  {
+    "alias": "no01",
+    "gate": "NOR",
+    "inputs": [
+      0.1,
+      2
+    ],
+    "expected_logic": 0,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/no01.ewb"
+  },
+  {
+    "alias": "no10",
+    "gate": "NOR",
+    "inputs": [
+      2,
+      0.1
+    ],
+    "expected_logic": 0,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/no10.ewb"
+  },
+  {
+    "alias": "no11",
+    "gate": "NOR",
+    "inputs": [
+      2,
+      2
+    ],
+    "expected_logic": 0,
+    "file": "/Users/user0/ewb_rev/codec_v2/measurements/no11.ewb"
+  }
+]

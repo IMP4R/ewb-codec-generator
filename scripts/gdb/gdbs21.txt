@@ -1,0 +1,24 @@
+set pagination off
+set architecture i386
+attach 2062406
+catch syscall write
+commands
+silent
+if $edx > 300
+  printf "BIGWRITE len=%d\n", $edx
+  # сканируем стек (esp..esp+8192) на адреса в PE-имидже 0x400000-0x55a000
+  set $sp = $esp
+  set $i = 0
+  while $i < 2048
+    set $v = *(unsigned int*)($sp + $i*4)
+    if $v >= 0x401000 && $v < 0x55a000
+      printf "STACK[%d]=0x%08x\n", $i, $v
+    end
+    set $i = $i + 1
+  end
+  detach
+  quit
+end
+continue
+end
+continue

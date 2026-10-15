@@ -1,0 +1,26 @@
+[
+  {
+    "file": "/Users/user0/АВУ/сдача/Лаб_5/ewb/Register.ewb",
+    "source": "/Users/user0/АВУ/лабы/lab05/Register.ewb",
+    "sha256": "492a798e71cfcdd99852f2beb631d8f393ba80f3146f2816917f149f4bdd4356",
+    "byte_identical": true
+  },
+  {
+    "file": "/Users/user0/АВУ/сдача/Лаб_5/ewb/Memory.ewb",
+    "source": "/Users/user0/АВУ/лабы/lab05/Memory.ewb",
+    "sha256": "2cc087a5e753ec6c2ae29676d037ebcbc274f365b5982e6d9ef1423d613d0ffd",
+    "byte_identical": true
+  },
+  {
+    "file": "/Users/user0/АВУ/сдача/Лаб_5/ewb/native/RS.native.ewb",
+    "built_from_basic_gates": true
+  },
+  {
+    "file": "/Users/user0/АВУ/сдача/Лаб_5/ewb/native/RS_sync.native.ewb",
+    "built_from_basic_gates": true
+  },
+  {
+    "file": "/Users/user0/АВУ/сдача/Лаб_5/ewb/native/D_sync.native.ewb",
+    "built_from_basic_gates": true
+  }
+]
